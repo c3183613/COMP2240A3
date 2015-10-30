@@ -1,0 +1,56 @@
+----------------------------------------
+Policy Name: Least Recently Used (Local fixed)
+_________________
+Process Filename: generated-tests/test4/process1.txt
+Turnaround Time: 36
+Number of page faults: 5
+Fault Times (cycle number): 0, 7, 14, 21, 29
+_________________
+Process Filename: generated-tests/test4/process2.txt
+Turnaround Time: 97
+Number of page faults: 11
+Fault Times (cycle number): 0, 8, 15, 22, 30, 37, 49, 57, 64, 79, 89
+_________________
+----------------------------------------
+----------------------------------------
+Policy Name: Least Recently Used (Global variable)
+_________________
+Process Filename: generated-tests/test4/process1.txt
+Turnaround Time: 36
+Number of page faults: 5
+Fault Times (cycle number): 0, 7, 14, 21, 29
+_________________
+Process Filename: generated-tests/test4/process2.txt
+Turnaround Time: 97
+Number of page faults: 11
+Fault Times (cycle number): 0, 8, 15, 22, 30, 37, 49, 57, 64, 79, 89
+_________________
+----------------------------------------
+----------------------------------------
+Policy Name: Clock (Local Fixed)
+_________________
+Process Filename: generated-tests/test4/process1.txt
+Turnaround Time: 36
+Number of page faults: 5
+Fault Times (cycle number): 0, 7, 14, 21, 29
+_________________
+Process Filename: generated-tests/test4/process2.txt
+Turnaround Time: 97
+Number of page faults: 11
+Fault Times (cycle number): 0, 8, 15, 22, 30, 37, 49, 57, 64, 79, 89
+_________________
+----------------------------------------
+----------------------------------------
+Policy Name: Clock (Global variable)
+_________________
+Process Filename: generated-tests/test4/process1.txt
+Turnaround Time: 36
+Number of page faults: 5
+Fault Times (cycle number): 0, 7, 14, 21, 29
+_________________
+Process Filename: generated-tests/test4/process2.txt
+Turnaround Time: 97
+Number of page faults: 11
+Fault Times (cycle number): 0, 8, 15, 22, 30, 37, 49, 57, 64, 79, 89
+_________________
+----------------------------------------

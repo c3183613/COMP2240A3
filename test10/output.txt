@@ -1,0 +1,96 @@
+----------------------------------------
+Policy Name: Least Recently Used (Local fixed)
+_________________
+Process Filename: generated-tests/test10/process1.txt
+Turnaround Time: 66
+Number of page faults: 8
+Fault Times (cycle number): 0, 7, 14, 21, 28, 40, 50, 59
+_________________
+Process Filename: generated-tests/test10/process2.txt
+Turnaround Time: 61
+Number of page faults: 8
+Fault Times (cycle number): 0, 8, 15, 22, 29, 38, 46, 53
+_________________
+Process Filename: generated-tests/test10/process3.txt
+Turnaround Time: 110
+Number of page faults: 14
+Fault Times (cycle number): 0, 9, 16, 23, 30, 39, 48, 55, 62, 70, 77, 85, 92, 100
+_________________
+Process Filename: generated-tests/test10/process4.txt
+Turnaround Time: 147
+Number of page faults: 18
+Fault Times (cycle number): 0, 10, 17, 24, 31, 40, 49, 60, 67, 74, 81, 90, 98, 111, 118, 125, 132, 139
+_________________
+----------------------------------------
+----------------------------------------
+Policy Name: Least Recently Used (Global variable)
+_________________
+Process Filename: generated-tests/test10/process1.txt
+Turnaround Time: 66
+Number of page faults: 8
+Fault Times (cycle number): 0, 7, 14, 21, 28, 40, 50, 59
+_________________
+Process Filename: generated-tests/test10/process2.txt
+Turnaround Time: 61
+Number of page faults: 8
+Fault Times (cycle number): 0, 8, 15, 22, 29, 38, 46, 53
+_________________
+Process Filename: generated-tests/test10/process3.txt
+Turnaround Time: 109
+Number of page faults: 13
+Fault Times (cycle number): 0, 9, 16, 23, 30, 39, 48, 55, 62, 70, 77, 86, 97
+_________________
+Process Filename: generated-tests/test10/process4.txt
+Turnaround Time: 122
+Number of page faults: 13
+Fault Times (cycle number): 0, 10, 17, 24, 31, 40, 49, 60, 68, 75, 86, 97, 110
+_________________
+----------------------------------------
+----------------------------------------
+Policy Name: Clock (Local Fixed)
+_________________
+Process Filename: generated-tests/test10/process1.txt
+Turnaround Time: 66
+Number of page faults: 8
+Fault Times (cycle number): 0, 7, 14, 21, 28, 40, 50, 59
+_________________
+Process Filename: generated-tests/test10/process2.txt
+Turnaround Time: 61
+Number of page faults: 8
+Fault Times (cycle number): 0, 8, 15, 22, 29, 38, 46, 53
+_________________
+Process Filename: generated-tests/test10/process3.txt
+Turnaround Time: 109
+Number of page faults: 14
+Fault Times (cycle number): 0, 9, 16, 23, 30, 39, 48, 55, 62, 70, 77, 85, 94, 101
+_________________
+Process Filename: generated-tests/test10/process4.txt
+Turnaround Time: 156
+Number of page faults: 20
+Fault Times (cycle number): 0, 10, 17, 24, 31, 40, 49, 60, 67, 74, 81, 90, 97, 104, 111, 120, 127, 134, 141, 148
+_________________
+----------------------------------------
+----------------------------------------
+Policy Name: Clock (Global variable)
+_________________
+Process Filename: generated-tests/test10/process1.txt
+Turnaround Time: 66
+Number of page faults: 8
+Fault Times (cycle number): 0, 7, 14, 21, 28, 40, 50, 59
+_________________
+Process Filename: generated-tests/test10/process2.txt
+Turnaround Time: 61
+Number of page faults: 8
+Fault Times (cycle number): 0, 8, 15, 22, 29, 38, 46, 53
+_________________
+Process Filename: generated-tests/test10/process3.txt
+Turnaround Time: 109
+Number of page faults: 13
+Fault Times (cycle number): 0, 9, 16, 23, 30, 39, 48, 55, 62, 70, 77, 86, 97
+_________________
+Process Filename: generated-tests/test10/process4.txt
+Turnaround Time: 122
+Number of page faults: 13
+Fault Times (cycle number): 0, 10, 17, 24, 31, 40, 49, 60, 68, 75, 86, 97, 110
+_________________
+----------------------------------------

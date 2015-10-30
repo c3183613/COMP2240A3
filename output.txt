@@ -1,0 +1,1000 @@
+
+Currently in processor at 1
+{}
+
+Currently in processor at 2
+{}
+
+Currently in processor at 3
+{}
+
+Currently in processor at 4
+{}
+
+Currently in processor at 5
+{}
+process1.txt_6 added 
+process2.txt_1 added 
+process3.txt_5 added 
+process4.txt_5 added 
+process5.txt_13 added 
+process6.txt_15 added 
+process7.txt_12 added 
+process8.txt_7 added 
+process9.txt_12 added 
+process10.txt_6 added 
+process11.txt_2 added 
+process12.txt_12 added 
+
+Currently in processor at 6
+{, process1.txt_6, process2.txt_1, process3.txt_5, process4.txt_5, process5.txt_13, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process1.txt_6 has gotten service time at 6
+
+Currently in processor at 7
+{, process1.txt_6, process2.txt_1, process3.txt_5, process4.txt_5, process5.txt_13, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process2.txt_1 has gotten service time at 7
+
+Currently in processor at 8
+{, process1.txt_6, process2.txt_1, process3.txt_5, process4.txt_5, process5.txt_13, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process3.txt_5 has gotten service time at 8
+
+Currently in processor at 9
+{, process1.txt_6, process2.txt_1, process3.txt_5, process4.txt_5, process5.txt_13, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process4.txt_5 has gotten service time at 9
+
+Currently in processor at 10
+{, process1.txt_6, process2.txt_1, process3.txt_5, process4.txt_5, process5.txt_13, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process5.txt_13 has gotten service time at 10
+
+Currently in processor at 11
+{, process1.txt_6, process2.txt_1, process3.txt_5, process4.txt_5, process5.txt_13, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process6.txt_15 has gotten service time at 11
+
+Currently in processor at 12
+{, process1.txt_6, process2.txt_1, process3.txt_5, process4.txt_5, process5.txt_13, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process7.txt_12 has gotten service time at 12
+process1.txt_7 added 
+
+Currently in processor at 13
+{, process1.txt_6, process1.txt_7, process2.txt_1, process3.txt_5, process4.txt_5, process5.txt_13, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process8.txt_7 has gotten service time at 13
+process2.txt_9 added 
+
+Currently in processor at 14
+{, process1.txt_6, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process4.txt_5, process5.txt_13, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process9.txt_12 has gotten service time at 14
+process3.txt_3 added 
+
+Currently in processor at 15
+{, process1.txt_6, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process5.txt_13, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process10.txt_6 has gotten service time at 15
+process4.txt_3 added 
+
+Currently in processor at 16
+{, process1.txt_6, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process11.txt_2 has gotten service time at 16
+process5.txt_15 added 
+
+Currently in processor at 17
+{, process1.txt_6, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process12.txt_12 has gotten service time at 17
+process6.txt_10 added 
+
+Currently in processor at 18
+{, process1.txt_6, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process1.txt_7 has gotten service time at 18
+process7.txt_4 added 
+
+Currently in processor at 19
+{, process1.txt_6, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process2.txt_9 has gotten service time at 19
+process8.txt_5 added 
+
+Currently in processor at 20
+{, process1.txt_6, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process10.txt_6, process11.txt_2, process12.txt_12}
+process3.txt_3 has gotten service time at 20
+process9.txt_6 added 
+
+Currently in processor at 21
+{, process1.txt_6, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process11.txt_2, process12.txt_12}
+process4.txt_3 has gotten service time at 21
+process10.txt_11 added 
+
+Currently in processor at 22
+{, process1.txt_6, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process12.txt_12}
+process5.txt_15 has gotten service time at 22
+process11.txt_14 added 
+
+Currently in processor at 23
+{, process1.txt_6, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12}
+process6.txt_10 has gotten service time at 23
+process12.txt_11 added 
+
+Currently in processor at 24
+{, process1.txt_6, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process6.txt_10 has gotten service time at 24
+process1.txt_1 added 
+process1.txt_6 is getting swapped for process1.txt_1
+
+Currently in processor at 25
+{, process1.txt_1, process1.txt_7, process2.txt_1, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process7.txt_4 has gotten service time at 25
+process2.txt_13 added 
+process2.txt_1 is getting swapped for process2.txt_13
+
+Currently in processor at 26
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_5, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process8.txt_5 has gotten service time at 26
+process3.txt_13 added 
+process3.txt_5 is getting swapped for process3.txt_13
+
+Currently in processor at 27
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_5, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process8.txt_5 has gotten service time at 27
+process4.txt_2 added 
+process4.txt_5 is getting swapped for process4.txt_2
+
+Currently in processor at 28
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_13, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process9.txt_6 has gotten service time at 28
+process5.txt_3 added 
+process5.txt_13 is getting swapped for process5.txt_3
+
+Currently in processor at 29
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process9.txt_12 has gotten service time at 29
+
+Currently in processor at 30
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_15, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process10.txt_11 has gotten service time at 30
+process6.txt_14 added 
+process6.txt_15 is getting swapped for process6.txt_14
+
+Currently in processor at 31
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_12, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process11.txt_14 has gotten service time at 31
+process7.txt_13 added 
+process7.txt_12 is getting swapped for process7.txt_13
+
+Currently in processor at 32
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process12.txt_11 has gotten service time at 32
+
+Currently in processor at 33
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_7, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process1.txt_1 has gotten service time at 33
+process8.txt_13 added 
+process8.txt_7 is getting swapped for process8.txt_13
+
+Currently in processor at 34
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process2.txt_13 has gotten service time at 34
+
+Currently in processor at 35
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_6, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process3.txt_13 has gotten service time at 35
+process9.txt_9 added 
+process9.txt_6 is getting swapped for process9.txt_9
+
+Currently in processor at 36
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_9, process10.txt_6, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process4.txt_2 has gotten service time at 36
+process10.txt_15 added 
+process10.txt_6 is getting swapped for process10.txt_15
+
+Currently in processor at 37
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_2, process11.txt_14, process12.txt_12, process12.txt_11}
+process5.txt_3 has gotten service time at 37
+process11.txt_13 added 
+process11.txt_2 is getting swapped for process11.txt_13
+
+Currently in processor at 38
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_13, process11.txt_14, process12.txt_12, process12.txt_11}
+process6.txt_14 has gotten service time at 38
+process12.txt_7 added 
+process12.txt_12 is getting swapped for process12.txt_7
+
+Currently in processor at 39
+{, process1.txt_1, process1.txt_7, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_13, process11.txt_14, process12.txt_7, process12.txt_11}
+process7.txt_13 has gotten service time at 39
+process1.txt_9 added 
+process1.txt_7 is getting swapped for process1.txt_9
+
+Currently in processor at 40
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_9, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_13, process11.txt_14, process12.txt_7, process12.txt_11}
+process8.txt_13 has gotten service time at 40
+process2.txt_3 added 
+process2.txt_9 is getting swapped for process2.txt_3
+
+Currently in processor at 41
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_3, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_13, process11.txt_14, process12.txt_7, process12.txt_11}
+process9.txt_9 has gotten service time at 41
+process3.txt_4 added 
+process3.txt_3 is getting swapped for process3.txt_4
+
+Currently in processor at 42
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_3, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_13, process11.txt_14, process12.txt_7, process12.txt_11}
+process10.txt_15 has gotten service time at 42
+process4.txt_11 added 
+process4.txt_3 is getting swapped for process4.txt_11
+
+Currently in processor at 43
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_15, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_13, process11.txt_14, process12.txt_7, process12.txt_11}
+process11.txt_13 has gotten service time at 43
+process5.txt_8 added 
+process5.txt_15 is getting swapped for process5.txt_8
+
+Currently in processor at 44
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_10, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_13, process11.txt_14, process12.txt_7, process12.txt_11}
+process12.txt_7 has gotten service time at 44
+process6.txt_3 added 
+process6.txt_10 is getting swapped for process6.txt_3
+
+Currently in processor at 45
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_4, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_13, process11.txt_14, process12.txt_7, process12.txt_11}
+process1.txt_9 has gotten service time at 45
+process7.txt_5 added 
+process7.txt_4 is getting swapped for process7.txt_5
+
+Currently in processor at 46
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_5, process9.txt_12, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_13, process11.txt_14, process12.txt_7, process12.txt_11}
+process1.txt_9 has gotten service time at 46
+process8.txt_14 added 
+process8.txt_5 is getting swapped for process8.txt_14
+
+Currently in processor at 47
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_12, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_13, process11.txt_14, process12.txt_7, process12.txt_11}
+process1.txt_9 has gotten service time at 47
+process9.txt_13 added 
+process9.txt_12 is getting swapped for process9.txt_13
+
+Currently in processor at 48
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_11, process11.txt_13, process11.txt_14, process12.txt_7, process12.txt_11}
+process2.txt_3 has gotten service time at 48
+process10.txt_6 added 
+process10.txt_11 is getting swapped for process10.txt_6
+
+Currently in processor at 49
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_14, process12.txt_7, process12.txt_11}
+process3.txt_4 has gotten service time at 49
+process11.txt_12 added 
+process11.txt_14 is getting swapped for process11.txt_12
+
+Currently in processor at 50
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_11}
+process3.txt_13 has gotten service time at 50
+process12.txt_12 added 
+process12.txt_11 is getting swapped for process12.txt_12
+
+Currently in processor at 51
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process4.txt_11 has gotten service time at 51
+
+Currently in processor at 52
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process5.txt_8 has gotten service time at 52
+
+Currently in processor at 53
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process6.txt_3 has gotten service time at 53
+
+Currently in processor at 54
+{, process1.txt_1, process1.txt_9, process2.txt_13, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process7.txt_5 has gotten service time at 54
+process2.txt_6 added 
+process2.txt_13 is getting swapped for process2.txt_6
+
+Currently in processor at 55
+{, process1.txt_1, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process8.txt_14 has gotten service time at 55
+
+Currently in processor at 56
+{, process1.txt_1, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_4, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process9.txt_13 has gotten service time at 56
+process3.txt_12 added 
+process3.txt_4 is getting swapped for process3.txt_12
+
+Currently in processor at 57
+{, process1.txt_1, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_12, process4.txt_2, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process10.txt_6 has gotten service time at 57
+process4.txt_8 added 
+process4.txt_2 is getting swapped for process4.txt_8
+
+Currently in processor at 58
+{, process1.txt_1, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_3, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process11.txt_12 has gotten service time at 58
+process5.txt_4 added 
+process5.txt_3 is getting swapped for process5.txt_4
+
+Currently in processor at 59
+{, process1.txt_1, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_14, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process12.txt_12 has gotten service time at 59
+process6.txt_7 added 
+process6.txt_14 is getting swapped for process6.txt_7
+
+Currently in processor at 60
+{, process1.txt_1, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_7, process6.txt_3, process7.txt_13, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process2.txt_6 has gotten service time at 60
+process7.txt_8 added 
+process7.txt_13 is getting swapped for process7.txt_8
+
+Currently in processor at 61
+{, process1.txt_1, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_7, process6.txt_3, process7.txt_8, process7.txt_5, process8.txt_13, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process3.txt_12 has gotten service time at 61
+process8.txt_7 added 
+process8.txt_13 is getting swapped for process8.txt_7
+
+Currently in processor at 62
+{, process1.txt_1, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_7, process6.txt_3, process7.txt_8, process7.txt_5, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_9, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process3.txt_12 has gotten service time at 62
+process9.txt_11 added 
+process9.txt_9 is getting swapped for process9.txt_11
+process1.txt_2 added 
+process1.txt_1 is getting swapped for process1.txt_2
+
+Currently in processor at 63
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_7, process6.txt_3, process7.txt_8, process7.txt_5, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_15, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process4.txt_8 has gotten service time at 63
+process10.txt_9 added 
+process10.txt_15 is getting swapped for process10.txt_9
+
+Currently in processor at 64
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_7, process6.txt_3, process7.txt_8, process7.txt_5, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_13, process11.txt_12, process12.txt_7, process12.txt_12}
+process5.txt_4 has gotten service time at 64
+process11.txt_9 added 
+process11.txt_13 is getting swapped for process11.txt_9
+
+Currently in processor at 65
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_7, process6.txt_3, process7.txt_8, process7.txt_5, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_7, process12.txt_12}
+process6.txt_7 has gotten service time at 65
+process12.txt_5 added 
+process12.txt_7 is getting swapped for process12.txt_5
+
+Currently in processor at 66
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_3, process3.txt_13, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_7, process6.txt_3, process7.txt_8, process7.txt_5, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process7.txt_8 has gotten service time at 66
+process2.txt_10 added 
+process2.txt_3 is getting swapped for process2.txt_10
+
+Currently in processor at 67
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_10, process3.txt_13, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_7, process6.txt_3, process7.txt_8, process7.txt_5, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process8.txt_7 has gotten service time at 67
+
+Currently in processor at 68
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_10, process3.txt_13, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_7, process6.txt_3, process7.txt_8, process7.txt_5, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process8.txt_7 has gotten service time at 68
+process3.txt_9 added 
+process3.txt_13 is getting swapped for process3.txt_9
+
+Currently in processor at 69
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_7, process6.txt_3, process7.txt_8, process7.txt_5, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process9.txt_11 has gotten service time at 69
+
+Currently in processor at 70
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_8, process6.txt_7, process6.txt_3, process7.txt_8, process7.txt_5, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process1.txt_2 has gotten service time at 70
+process5.txt_14 added 
+process5.txt_8 is getting swapped for process5.txt_14
+
+Currently in processor at 71
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_3, process7.txt_8, process7.txt_5, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process10.txt_9 has gotten service time at 71
+process6.txt_2 added 
+process6.txt_3 is getting swapped for process6.txt_2
+
+Currently in processor at 72
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_5, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process11.txt_9 has gotten service time at 72
+process7.txt_3 added 
+process7.txt_5 is getting swapped for process7.txt_3
+
+Currently in processor at 73
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process12.txt_5 has gotten service time at 73
+
+Currently in processor at 74
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_14, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process2.txt_10 has gotten service time at 74
+process8.txt_13 added 
+process8.txt_14 is getting swapped for process8.txt_13
+
+Currently in processor at 75
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_13, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process3.txt_9 has gotten service time at 75
+process9.txt_14 added 
+process9.txt_13 is getting swapped for process9.txt_14
+
+Currently in processor at 76
+{, process1.txt_2, process1.txt_9, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process5.txt_14 has gotten service time at 76
+process1.txt_11 added 
+process1.txt_9 is getting swapped for process1.txt_11
+
+Currently in processor at 77
+{, process1.txt_2, process1.txt_11, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_6, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process6.txt_2 has gotten service time at 77
+process10.txt_3 added 
+process10.txt_6 is getting swapped for process10.txt_3
+
+Currently in processor at 78
+{, process1.txt_2, process1.txt_11, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_12, process12.txt_5, process12.txt_12}
+process7.txt_3 has gotten service time at 78
+process11.txt_6 added 
+process11.txt_12 is getting swapped for process11.txt_6
+
+Currently in processor at 79
+{, process1.txt_2, process1.txt_11, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_12}
+process8.txt_13 has gotten service time at 79
+process12.txt_15 added 
+process12.txt_12 is getting swapped for process12.txt_15
+
+Currently in processor at 80
+{, process1.txt_2, process1.txt_11, process2.txt_6, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_15}
+process8.txt_13 has gotten service time at 80
+process2.txt_12 added 
+process2.txt_6 is getting swapped for process2.txt_12
+
+Currently in processor at 81
+{, process1.txt_2, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_12, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_15}
+process9.txt_14 has gotten service time at 81
+process3.txt_7 added 
+process3.txt_12 is getting swapped for process3.txt_7
+
+Currently in processor at 82
+{, process1.txt_2, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_15}
+process1.txt_11 has gotten service time at 82
+
+Currently in processor at 83
+{, process1.txt_2, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_7, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_15}
+process10.txt_3 has gotten service time at 83
+process6.txt_8 added 
+process6.txt_7 is getting swapped for process6.txt_8
+
+Currently in processor at 84
+{, process1.txt_2, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_8, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_15}
+process11.txt_6 has gotten service time at 84
+process7.txt_13 added 
+process7.txt_8 is getting swapped for process7.txt_13
+
+Currently in processor at 85
+{, process1.txt_2, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_15}
+process12.txt_15 has gotten service time at 85
+
+Currently in processor at 86
+{, process1.txt_2, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_3, process8.txt_7, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_15}
+process2.txt_12 has gotten service time at 86
+process8.txt_15 added 
+process8.txt_7 is getting swapped for process8.txt_15
+
+Currently in processor at 87
+{, process1.txt_2, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_3, process8.txt_15, process8.txt_13, process9.txt_14, process9.txt_11, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_15}
+process3.txt_7 has gotten service time at 87
+process9.txt_4 added 
+process9.txt_11 is getting swapped for process9.txt_4
+
+Currently in processor at 88
+{, process1.txt_2, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_3, process8.txt_15, process8.txt_13, process9.txt_14, process9.txt_4, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_15}
+process6.txt_8 has gotten service time at 88
+process1.txt_15 added 
+process1.txt_2 is getting swapped for process1.txt_15
+
+Currently in processor at 89
+{, process1.txt_15, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_3, process8.txt_15, process8.txt_13, process9.txt_14, process9.txt_4, process10.txt_9, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_15}
+process7.txt_13 has gotten service time at 89
+process10.txt_8 added 
+process10.txt_9 is getting swapped for process10.txt_8
+
+Currently in processor at 90
+{, process1.txt_15, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_3, process8.txt_15, process8.txt_13, process9.txt_14, process9.txt_4, process10.txt_8, process10.txt_3, process11.txt_9, process11.txt_6, process12.txt_5, process12.txt_15}
+process8.txt_15 has gotten service time at 90
+process11.txt_1 added 
+process11.txt_9 is getting swapped for process11.txt_1
+
+Currently in processor at 91
+{, process1.txt_15, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_3, process8.txt_15, process8.txt_13, process9.txt_14, process9.txt_4, process10.txt_8, process10.txt_3, process11.txt_1, process11.txt_6, process12.txt_5, process12.txt_15}
+process9.txt_4 has gotten service time at 91
+process12.txt_1 added 
+process12.txt_5 is getting swapped for process12.txt_1
+
+Currently in processor at 92
+{, process1.txt_15, process1.txt_11, process2.txt_12, process2.txt_10, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_3, process8.txt_15, process8.txt_13, process9.txt_14, process9.txt_4, process10.txt_8, process10.txt_3, process11.txt_1, process11.txt_6, process12.txt_1, process12.txt_15}
+process1.txt_15 has gotten service time at 92
+process2.txt_4 added 
+process2.txt_10 is getting swapped for process2.txt_4
+
+Currently in processor at 93
+{, process1.txt_15, process1.txt_11, process2.txt_12, process2.txt_4, process3.txt_9, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_3, process8.txt_15, process8.txt_13, process9.txt_14, process9.txt_4, process10.txt_8, process10.txt_3, process11.txt_1, process11.txt_6, process12.txt_1, process12.txt_15}
+process10.txt_8 has gotten service time at 93
+process3.txt_10 added 
+process3.txt_9 is getting swapped for process3.txt_10
+
+Currently in processor at 94
+{, process1.txt_15, process1.txt_11, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_3, process8.txt_15, process8.txt_13, process9.txt_14, process9.txt_4, process10.txt_8, process10.txt_3, process11.txt_1, process11.txt_6, process12.txt_1, process12.txt_15}
+process10.txt_3 has gotten service time at 94
+
+Currently in processor at 95
+{, process1.txt_15, process1.txt_11, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_3, process8.txt_15, process8.txt_13, process9.txt_14, process9.txt_4, process10.txt_8, process10.txt_3, process11.txt_1, process11.txt_6, process12.txt_1, process12.txt_15}
+process11.txt_1 has gotten service time at 95
+process7.txt_8 added 
+process7.txt_3 is getting swapped for process7.txt_8
+
+Currently in processor at 96
+{, process1.txt_15, process1.txt_11, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_15, process8.txt_13, process9.txt_14, process9.txt_4, process10.txt_8, process10.txt_3, process11.txt_1, process11.txt_6, process12.txt_1, process12.txt_15}
+process12.txt_1 has gotten service time at 96
+process8.txt_11 added 
+process8.txt_13 is getting swapped for process8.txt_11
+
+Currently in processor at 97
+{, process1.txt_15, process1.txt_11, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_15, process8.txt_11, process9.txt_14, process9.txt_4, process10.txt_8, process10.txt_3, process11.txt_1, process11.txt_6, process12.txt_1, process12.txt_15}
+process2.txt_4 has gotten service time at 97
+process9.txt_15 added 
+process9.txt_14 is getting swapped for process9.txt_15
+
+Currently in processor at 98
+{, process1.txt_15, process1.txt_11, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_15, process8.txt_11, process9.txt_15, process9.txt_4, process10.txt_8, process10.txt_3, process11.txt_1, process11.txt_6, process12.txt_1, process12.txt_15}
+process3.txt_10 has gotten service time at 98
+process1.txt_1 added 
+process1.txt_11 is getting swapped for process1.txt_1
+
+Currently in processor at 99
+{, process1.txt_15, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_15, process8.txt_11, process9.txt_15, process9.txt_4, process10.txt_8, process10.txt_3, process11.txt_1, process11.txt_6, process12.txt_1, process12.txt_15}
+process7.txt_8 has gotten service time at 99
+
+Currently in processor at 100
+{, process1.txt_15, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_15, process8.txt_11, process9.txt_15, process9.txt_4, process10.txt_8, process10.txt_3, process11.txt_1, process11.txt_6, process12.txt_1, process12.txt_15}
+process8.txt_11 has gotten service time at 100
+process10.txt_2 added 
+process10.txt_8 is getting swapped for process10.txt_2
+
+Currently in processor at 101
+{, process1.txt_15, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_15, process8.txt_11, process9.txt_15, process9.txt_4, process10.txt_2, process10.txt_3, process11.txt_1, process11.txt_6, process12.txt_1, process12.txt_15}
+process9.txt_15 has gotten service time at 101
+process11.txt_13 added 
+process11.txt_6 is getting swapped for process11.txt_13
+
+Currently in processor at 102
+{, process1.txt_15, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_15, process8.txt_11, process9.txt_15, process9.txt_4, process10.txt_2, process10.txt_3, process11.txt_1, process11.txt_13, process12.txt_1, process12.txt_15}
+process1.txt_1 has gotten service time at 102
+process12.txt_7 added 
+process12.txt_15 is getting swapped for process12.txt_7
+
+Currently in processor at 103
+{, process1.txt_15, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_15, process8.txt_11, process9.txt_15, process9.txt_4, process10.txt_2, process10.txt_3, process11.txt_1, process11.txt_13, process12.txt_1, process12.txt_7}
+process10.txt_2 has gotten service time at 103
+
+Currently in processor at 104
+{, process1.txt_15, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_7, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_15, process8.txt_11, process9.txt_15, process9.txt_4, process10.txt_2, process10.txt_3, process11.txt_1, process11.txt_13, process12.txt_1, process12.txt_7}
+process11.txt_13 has gotten service time at 104
+process3.txt_3 added 
+process3.txt_7 is getting swapped for process3.txt_3
+
+Currently in processor at 105
+{, process1.txt_15, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_15, process8.txt_11, process9.txt_15, process9.txt_4, process10.txt_2, process10.txt_3, process11.txt_1, process11.txt_13, process12.txt_1, process12.txt_7}
+process12.txt_7 has gotten service time at 105
+
+Currently in processor at 106
+{, process1.txt_15, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_15, process8.txt_11, process9.txt_15, process9.txt_4, process10.txt_2, process10.txt_3, process11.txt_1, process11.txt_13, process12.txt_1, process12.txt_7}
+process3.txt_3 has gotten service time at 106
+process8.txt_13 added 
+process8.txt_15 is getting swapped for process8.txt_13
+
+Currently in processor at 107
+{, process1.txt_15, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_11, process9.txt_15, process9.txt_4, process10.txt_2, process10.txt_3, process11.txt_1, process11.txt_13, process12.txt_1, process12.txt_7}
+process8.txt_13 has gotten service time at 107
+process9.txt_11 added 
+process9.txt_4 is getting swapped for process9.txt_11
+
+Currently in processor at 108
+{, process1.txt_15, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_11, process9.txt_15, process9.txt_11, process10.txt_2, process10.txt_3, process11.txt_1, process11.txt_13, process12.txt_1, process12.txt_7}
+process9.txt_11 has gotten service time at 108
+process1.txt_11 added 
+process1.txt_15 is getting swapped for process1.txt_11
+
+Currently in processor at 109
+{, process1.txt_11, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_11, process9.txt_15, process9.txt_11, process10.txt_2, process10.txt_3, process11.txt_1, process11.txt_13, process12.txt_1, process12.txt_7}
+process1.txt_11 has gotten service time at 109
+process10.txt_8 added 
+process10.txt_3 is getting swapped for process10.txt_8
+
+Currently in processor at 110
+{, process1.txt_11, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_11, process9.txt_15, process9.txt_11, process10.txt_2, process10.txt_8, process11.txt_1, process11.txt_13, process12.txt_1, process12.txt_7}
+process10.txt_8 has gotten service time at 110
+process11.txt_6 added 
+process11.txt_1 is getting swapped for process11.txt_6
+
+Currently in processor at 111
+{, process1.txt_11, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_11, process9.txt_15, process9.txt_11, process10.txt_2, process10.txt_8, process11.txt_6, process11.txt_13, process12.txt_1, process12.txt_7}
+process11.txt_6 has gotten service time at 111
+process12.txt_11 added 
+process12.txt_1 is getting swapped for process12.txt_11
+
+Currently in processor at 112
+{, process1.txt_11, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_10, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_11, process9.txt_15, process9.txt_11, process10.txt_2, process10.txt_8, process11.txt_6, process11.txt_13, process12.txt_11, process12.txt_7}
+process12.txt_11 has gotten service time at 112
+process3.txt_2 added 
+process3.txt_10 is getting swapped for process3.txt_2
+
+Currently in processor at 113
+{, process1.txt_11, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_11, process9.txt_15, process9.txt_11, process10.txt_2, process10.txt_8, process11.txt_6, process11.txt_13, process12.txt_11, process12.txt_7}
+process12.txt_7 has gotten service time at 113
+process8.txt_4 added 
+process8.txt_11 is getting swapped for process8.txt_4
+
+Currently in processor at 114
+{, process1.txt_11, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_15, process9.txt_11, process10.txt_2, process10.txt_8, process11.txt_6, process11.txt_13, process12.txt_11, process12.txt_7}
+process3.txt_2 has gotten service time at 114
+process9.txt_5 added 
+process9.txt_15 is getting swapped for process9.txt_5
+
+Currently in processor at 115
+{, process1.txt_11, process1.txt_1, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_11, process10.txt_2, process10.txt_8, process11.txt_6, process11.txt_13, process12.txt_11, process12.txt_7}
+process8.txt_4 has gotten service time at 115
+process1.txt_7 added 
+process1.txt_1 is getting swapped for process1.txt_7
+
+Currently in processor at 116
+{, process1.txt_11, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_11, process10.txt_2, process10.txt_8, process11.txt_6, process11.txt_13, process12.txt_11, process12.txt_7}
+process8.txt_4 has gotten service time at 116
+process10.txt_14 added 
+process10.txt_2 is getting swapped for process10.txt_14
+
+Currently in processor at 117
+{, process1.txt_11, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_11, process10.txt_14, process10.txt_8, process11.txt_6, process11.txt_13, process12.txt_11, process12.txt_7}
+process8.txt_4 has gotten service time at 117
+process11.txt_4 added 
+process11.txt_13 is getting swapped for process11.txt_4
+
+Currently in processor at 118
+{, process1.txt_11, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_11, process10.txt_14, process10.txt_8, process11.txt_6, process11.txt_4, process12.txt_11, process12.txt_7}
+process9.txt_5 has gotten service time at 118
+
+Currently in processor at 119
+{, process1.txt_11, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_11, process10.txt_14, process10.txt_8, process11.txt_6, process11.txt_4, process12.txt_11, process12.txt_7}
+process9.txt_5 has gotten service time at 119
+process12.txt_6 added 
+process12.txt_11 is getting swapped for process12.txt_6
+
+Currently in processor at 120
+{, process1.txt_11, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_3, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_11, process10.txt_14, process10.txt_8, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_7}
+process1.txt_7 has gotten service time at 120
+process3.txt_10 added 
+process3.txt_3 is getting swapped for process3.txt_10
+
+Currently in processor at 121
+{, process1.txt_11, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_11, process10.txt_14, process10.txt_8, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_7}
+process10.txt_14 has gotten service time at 121
+
+Currently in processor at 122
+{, process1.txt_11, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_11, process10.txt_14, process10.txt_8, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_7}
+process11.txt_4 has gotten service time at 122
+
+Currently in processor at 123
+{, process1.txt_11, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_11, process10.txt_14, process10.txt_8, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_7}
+process12.txt_6 has gotten service time at 123
+
+Currently in processor at 124
+{, process1.txt_11, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_11, process10.txt_14, process10.txt_8, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_7}
+process3.txt_10 has gotten service time at 124
+
+Currently in processor at 125
+{, process1.txt_11, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_11, process10.txt_14, process10.txt_8, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_7}
+process9.txt_14 added 
+process9.txt_11 is getting swapped for process9.txt_14
+
+Currently in processor at 126
+{, process1.txt_11, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_14, process10.txt_14, process10.txt_8, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_7}
+process9.txt_14 has gotten service time at 126
+process1.txt_9 added 
+process1.txt_11 is getting swapped for process1.txt_9
+
+Currently in processor at 127
+{, process1.txt_9, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_14, process10.txt_14, process10.txt_8, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_7}
+process9.txt_14 has gotten service time at 127
+process10.txt_10 added 
+process10.txt_8 is getting swapped for process10.txt_10
+
+Currently in processor at 128
+{, process1.txt_9, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_13, process8.txt_4, process9.txt_5, process9.txt_14, process10.txt_14, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_7}
+process1.txt_9 has gotten service time at 128
+process8.txt_7 added 
+process8.txt_13 is getting swapped for process8.txt_7
+
+Currently in processor at 129
+{, process1.txt_9, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_5, process9.txt_14, process10.txt_14, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_7}
+process10.txt_10 has gotten service time at 129
+process12.txt_15 added 
+process12.txt_7 is getting swapped for process12.txt_15
+
+Currently in processor at 130
+{, process1.txt_9, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_2, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_5, process9.txt_14, process10.txt_14, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_15}
+process8.txt_7 has gotten service time at 130
+process3.txt_8 added 
+process3.txt_2 is getting swapped for process3.txt_8
+
+Currently in processor at 131
+{, process1.txt_9, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_5, process9.txt_14, process10.txt_14, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_15}
+process8.txt_4 has gotten service time at 131
+
+Currently in processor at 132
+{, process1.txt_9, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_5, process9.txt_14, process10.txt_14, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_15}
+process8.txt_4 has gotten service time at 132
+
+Currently in processor at 133
+{, process1.txt_9, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_5, process9.txt_14, process10.txt_14, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_15}
+process12.txt_15 has gotten service time at 133
+process9.txt_15 added 
+process9.txt_5 is getting swapped for process9.txt_15
+
+Currently in processor at 134
+{, process1.txt_9, process1.txt_7, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_15, process9.txt_14, process10.txt_14, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_15}
+process3.txt_8 has gotten service time at 134
+process1.txt_4 added 
+process1.txt_7 is getting swapped for process1.txt_4
+
+Currently in processor at 135
+{, process1.txt_9, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_15, process9.txt_14, process10.txt_14, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_15}
+process9.txt_15 has gotten service time at 135
+process10.txt_5 added 
+process10.txt_14 is getting swapped for process10.txt_5
+
+Currently in processor at 136
+{, process1.txt_9, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_15, process9.txt_14, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_15}
+process1.txt_4 has gotten service time at 136
+
+Currently in processor at 137
+{, process1.txt_9, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_15, process9.txt_14, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_15}
+process10.txt_5 has gotten service time at 137
+
+Currently in processor at 138
+{, process1.txt_9, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_15, process9.txt_14, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_15}
+
+Currently in processor at 139
+{, process1.txt_9, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_15, process9.txt_14, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_6, process12.txt_15}
+process12.txt_4 added 
+process12.txt_6 is getting swapped for process12.txt_4
+
+Currently in processor at 140
+{, process1.txt_9, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_4, process9.txt_15, process9.txt_14, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_15}
+process12.txt_4 has gotten service time at 140
+process8.txt_11 added 
+process8.txt_7 is getting swapped for process8.txt_11
+
+Currently in processor at 141
+{, process1.txt_9, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_4, process9.txt_15, process9.txt_14, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_15}
+process8.txt_11 has gotten service time at 141
+process9.txt_1 added 
+process9.txt_14 is getting swapped for process9.txt_1
+
+Currently in processor at 142
+{, process1.txt_9, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_4, process9.txt_15, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_15}
+process9.txt_1 has gotten service time at 142
+process1.txt_7 added 
+process1.txt_9 is getting swapped for process1.txt_7
+
+Currently in processor at 143
+{, process1.txt_7, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_4, process9.txt_15, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_15}
+process1.txt_7 has gotten service time at 143
+
+Currently in processor at 144
+{, process1.txt_7, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_4, process9.txt_15, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_15}
+
+Currently in processor at 145
+{, process1.txt_7, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_4, process9.txt_15, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_15}
+
+Currently in processor at 146
+{, process1.txt_7, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_4, process9.txt_15, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_15}
+process12.txt_8 added 
+process12.txt_15 is getting swapped for process12.txt_8
+
+Currently in processor at 147
+{, process1.txt_7, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_4, process9.txt_15, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_8}
+process12.txt_8 has gotten service time at 147
+process8.txt_12 added 
+process8.txt_4 is getting swapped for process8.txt_12
+
+Currently in processor at 148
+{, process1.txt_7, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_12, process9.txt_15, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_8}
+process8.txt_12 has gotten service time at 148
+process9.txt_2 added 
+process9.txt_15 is getting swapped for process9.txt_2
+
+Currently in processor at 149
+{, process1.txt_7, process1.txt_4, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_12, process9.txt_2, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_8}
+process9.txt_2 has gotten service time at 149
+process1.txt_6 added 
+process1.txt_4 is getting swapped for process1.txt_6
+
+Currently in processor at 150
+{, process1.txt_7, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_12, process9.txt_2, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_8}
+process1.txt_6 has gotten service time at 150
+
+Currently in processor at 151
+{, process1.txt_7, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_12, process9.txt_2, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_8}
+
+Currently in processor at 152
+{, process1.txt_7, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_12, process9.txt_2, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_8}
+
+Currently in processor at 153
+{, process1.txt_7, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_12, process9.txt_2, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_4, process12.txt_8}
+process12.txt_1 added 
+process12.txt_4 is getting swapped for process12.txt_1
+
+Currently in processor at 154
+{, process1.txt_7, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_11, process8.txt_12, process9.txt_2, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_8}
+process12.txt_1 has gotten service time at 154
+process8.txt_10 added 
+process8.txt_11 is getting swapped for process8.txt_10
+
+Currently in processor at 155
+{, process1.txt_7, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_12, process9.txt_2, process9.txt_1, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_8}
+process8.txt_10 has gotten service time at 155
+process9.txt_15 added 
+process9.txt_1 is getting swapped for process9.txt_15
+
+Currently in processor at 156
+{, process1.txt_7, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_12, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_8}
+process9.txt_15 has gotten service time at 156
+process1.txt_5 added 
+process1.txt_7 is getting swapped for process1.txt_5
+
+Currently in processor at 157
+{, process1.txt_5, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_12, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_8}
+process1.txt_5 has gotten service time at 157
+
+Currently in processor at 158
+{, process1.txt_5, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_12, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_8}
+
+Currently in processor at 159
+{, process1.txt_5, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_12, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_8}
+
+Currently in processor at 160
+{, process1.txt_5, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_12, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_8}
+process12.txt_5 added 
+process12.txt_8 is getting swapped for process12.txt_5
+
+Currently in processor at 161
+{, process1.txt_5, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_12, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_5}
+process12.txt_5 has gotten service time at 161
+process8.txt_11 added 
+process8.txt_12 is getting swapped for process8.txt_11
+
+Currently in processor at 162
+{, process1.txt_5, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_5}
+process12.txt_5 has gotten service time at 162
+
+Currently in processor at 163
+{, process1.txt_5, process1.txt_6, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_5}
+process8.txt_11 has gotten service time at 163
+process1.txt_9 added 
+process1.txt_6 is getting swapped for process1.txt_9
+
+Currently in processor at 164
+{, process1.txt_5, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_5}
+process8.txt_11 has gotten service time at 164
+
+Currently in processor at 165
+{, process1.txt_5, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_5}
+process8.txt_11 has gotten service time at 165
+
+Currently in processor at 166
+{, process1.txt_5, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_5}
+process1.txt_9 has gotten service time at 166
+
+Currently in processor at 167
+{, process1.txt_5, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_5}
+
+Currently in processor at 168
+{, process1.txt_5, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_5}
+process12.txt_14 added 
+process12.txt_1 is getting swapped for process12.txt_14
+
+Currently in processor at 169
+{, process1.txt_5, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_5}
+process12.txt_14 has gotten service time at 169
+
+Currently in processor at 170
+{, process1.txt_5, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_5}
+
+Currently in processor at 171
+{, process1.txt_5, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_5}
+
+Currently in processor at 172
+{, process1.txt_5, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_10, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_5}
+process1.txt_10 added 
+process1.txt_5 is getting swapped for process1.txt_10
+process8.txt_3 added 
+process8.txt_10 is getting swapped for process8.txt_3
+
+Currently in processor at 173
+{, process1.txt_10, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_5}
+process1.txt_10 has gotten service time at 173
+
+Currently in processor at 174
+{, process1.txt_10, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_5}
+process8.txt_3 has gotten service time at 174
+
+Currently in processor at 175
+{, process1.txt_10, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_5}
+process12.txt_13 added 
+process12.txt_5 is getting swapped for process12.txt_13
+
+Currently in processor at 176
+{, process1.txt_10, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_13}
+process12.txt_13 has gotten service time at 176
+
+Currently in processor at 177
+{, process1.txt_10, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_13}
+
+Currently in processor at 178
+{, process1.txt_10, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_13}
+
+Currently in processor at 179
+{, process1.txt_10, process1.txt_9, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_13}
+process1.txt_3 added 
+process1.txt_9 is getting swapped for process1.txt_3
+
+Currently in processor at 180
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_11, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_13}
+process1.txt_3 has gotten service time at 180
+process8.txt_13 added 
+process8.txt_11 is getting swapped for process8.txt_13
+
+Currently in processor at 181
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_13}
+process1.txt_10 has gotten service time at 181
+
+Currently in processor at 182
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_14, process12.txt_13}
+process8.txt_13 has gotten service time at 182
+process12.txt_1 added 
+process12.txt_14 is getting swapped for process12.txt_1
+
+Currently in processor at 183
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_13}
+process12.txt_1 has gotten service time at 183
+
+Currently in processor at 184
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_13}
+
+Currently in processor at 185
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_13}
+
+Currently in processor at 186
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_13}
+
+Currently in processor at 187
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_13}
+
+Currently in processor at 188
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_13}
+
+Currently in processor at 189
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_3, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_13}
+process12.txt_12 added 
+process12.txt_13 is getting swapped for process12.txt_12
+process8.txt_7 added 
+process8.txt_3 is getting swapped for process8.txt_7
+
+Currently in processor at 190
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_12}
+process12.txt_12 has gotten service time at 190
+
+Currently in processor at 191
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_12}
+process8.txt_7 has gotten service time at 191
+
+Currently in processor at 192
+{, process1.txt_10, process1.txt_3, process2.txt_12, process2.txt_4, process3.txt_8, process3.txt_10, process4.txt_8, process4.txt_11, process5.txt_4, process5.txt_14, process6.txt_8, process6.txt_2, process7.txt_13, process7.txt_8, process8.txt_7, process8.txt_13, process9.txt_2, process9.txt_15, process10.txt_5, process10.txt_10, process11.txt_6, process11.txt_4, process12.txt_1, process12.txt_12}
+PID  Turnaround Time  # Faults  Fault times
+1		182				18		{0, 7, 19, 34, 57, 71, 83, 93, 103, 110, 121, 129, 137, 144, 151, 158, 167, 174}
+2		98				8		{0, 8, 20, 35, 49, 61, 75, 87}
+3		135				12		{0, 9, 21, 36, 51, 63, 76, 88, 99, 107, 115, 125}
+4		64				5		{0, 10, 22, 37, 52}
+5		77				6		{0, 11, 23, 38, 53, 65}
+6		89				7		{0, 12, 25, 39, 54, 66, 78}
+7		100				8		{0, 13, 26, 40, 55, 67, 79, 90}
+8		192				18		{0, 14, 28, 41, 56, 69, 81, 91, 101, 108, 123, 135, 142, 149, 156, 167, 175, 184}
+9		157				15		{0, 15, 30, 42, 57, 70, 82, 92, 102, 109, 120, 128, 136, 143, 150}
+10		138				12		{0, 16, 31, 43, 58, 72, 84, 95, 104, 111, 122, 130}
+11		123				10		{0, 17, 32, 44, 59, 73, 85, 96, 105, 112}
+12		191				19		{0, 18, 33, 45, 60, 74, 86, 97, 106, 114, 124, 134, 141, 148, 155, 163, 170, 177, 184}
