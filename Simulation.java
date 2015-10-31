@@ -9,7 +9,6 @@ class Simulation
 
 	Simulation(Vector<Process> dummy)
 	{
-		processor = new Processor();
 		masterVector = dummy;
 	}
 

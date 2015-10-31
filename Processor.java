@@ -32,10 +32,13 @@ class Processor
 	// Returns true if main memory contains first page of process
 	public boolean contains(Process p)
 	{
-		for(int i=0; i<MEMORYSIZE; i++)
+		for(int i=p.memoryRange.firstElement().intValue(); i<=p.memoryRange.get(1).intValue(); i++)
 		{
-			if(frames[i].equals(p.pages.firstElement()))
-				return true;
+			if(frames[i].isOccupied())
+			{
+				if(frames[i].getHolding().equals(p.pages.firstElement()))
+					return true;
+			}
 		}
 		return false;
 	}
@@ -56,15 +59,7 @@ class Processor
 	// Input: process and lru vector
 	public void occupy(Process p, Vector<Page> lru)
 	{
-		// remove any other instances from lru
-		for(int i=0; i<lru.size();i++)
-		{
-			if(lru.get(i).equals(p.pages.firstElement()))
-			{
-				lru.remove(i);
-				break;
-			}
-		}
+		System.out.println();
 		// add to end of lru
 		lru.add(p.pages.firstElement());
 		// take free space
@@ -83,26 +78,18 @@ class Processor
 	// Input: Process and lru
 	public void lruSwap(Process p, Vector<Page> lru)
 	{
-		// replace
-		for(int i=p.memoryRange.firstElement().intValue();i<=p.memoryRange.get(1).intValue();i++)
+		System.out.println("swapping " +lru.get(0).getID()+" with " + p.pages.firstElement().getID());
+		// find and swap
+		for(int i=p.memoryRange.firstElement().intValue(); i<=p.memoryRange.get(1).intValue(); i++)
 		{
-			if(frames[i].equals(lru.firstElement()))
+			if(frames[i].getHolding().equals(lru.get(0)))
 			{
 				frames[i].holdPage(p.pages.firstElement());
 				break;
 			}
 		}
-		// remove lru(0)
+		// remove
 		lru.remove(0);
-		// remove any other instances of page
-		for(int i=0; i<lru.size(); i++)
-		{
-			if(lru.get(i).equals(p.pages.firstElement()))
-			{
-				lru.remove(i);
-				break;
-			}
-		}
 		// add to end of lru
 		lru.add(p.pages.firstElement());
 	}
