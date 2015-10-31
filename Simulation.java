@@ -82,6 +82,7 @@ class Simulation
 				incrBQ(bQ, rQ, processor, lru);
 			}
 		}//finished while loop
+		System.out.println("LRU Fixed:");
 		print();
 	}
 
@@ -118,22 +119,107 @@ class Simulation
 		}
 	}
 
+	private void incrBQVariable(Vector<Process> bQ, Vector<Process> rQ, Processor processor, Vector<Page> lru)
+	{
+		// for each process that is blocked
+		for(int i=0; i<bQ.size(); i++)
+		{
+			// increment the time
+			bQ.get(i).incrBlockedTime();
+			// if blocked time is finished
+			if(bQ.get(i).getBlockedTime() == 6)
+			{
+				// reset blocked time and add to ready queue
+				bQ.get(i).rBlockedTime();
+				rQ.add(bQ.get(i));
+				// if there is free space for process
+				if(processor.freeSpace(bQ.get(i)))
+				{
+					// occupy that free space
+					processor.occupy(bQ.get(i), lru);
+				}
+				else
+				{
+					// otherwise, swap with least recently used
+					processor.lruSwap(bQ.get(i), lru);
+				}
+				// remove from blocked queue and decrement
+				bQ.remove(i);
+				i--;
+			}
+		}
+	}
+
 	public void variableLRU()
 	{
 		Vector<Process> rQ = cpVector(masterVector);
 		Vector<Process> bQ = new Vector<Process>();
+		Vector<Page> lru = new Vector<Page>();
+		getRangeVariable(rQ);
 		int roundRobin = 0;
 		Processor processor = new Processor();
 		while(rQ.size()>0 || bQ.size()>0)
 		{
-			if(rQ.size()>0)
+			if(roundRobin == 3)
 			{
-
+				rQ.add(rQ.get(0));
+				rQ.remove(0);
+				roundRobin = 0;
 			}
+			// if ready queue has elements in there
+			if(rQ.size() > 0)
+			{
+				// check if main memory contains first page of process
+				if(processor.contains(rQ.firstElement()))
+				{
+					// if it does,
+					// run it. Also moves to end of lru
+					processor.run(rQ.firstElement(), lru);
+					roundRobin++;
+					// increment time
+					processor.incrTime();
+					// if Process has no more pages after processing, remove it from the queue
+					if(rQ.firstElement().pages.size() == 0)
+					{
+						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() + "\t\t"  + (processor.getTime()) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
+						+ rQ.firstElement().getFaultTimesString();
+						rQ.remove(0);
+					}
+					// increment blocked queue
+					incrBQVariable(bQ, rQ, processor, lru);
+				}
+				// memory does not contain the page, add to blocked queue and write page fault
+				else
+				{
+					// reset rr
+					roundRobin = 0;
+					// add page fault at this time
+					rQ.get(0).addFault(processor.getTime());
+					// add to blocked queue
+					bQ.add(rQ.get(0));
+					// remove from ready queue
+					rQ.remove(0);
+				}
+			}
+			// rQ.size == 0
 			else
 			{
-				// increment time, 
+				roundRobin = 0;
+				// increment time
+				processor.incrTime();
+				incrBQVariable(bQ, rQ, processor, lru);
 			}
+		}
+		System.out.println("LRU Variable:");
+		print();
+	}
+
+	public void getRangeVariable(Vector<Process> vector)
+	{
+		for(Process p: vector)
+		{
+			p.memoryRange.add(0);
+			p.memoryRange.add(processor.MEMORYSIZE-1);
 		}
 	}
 

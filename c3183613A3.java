@@ -49,7 +49,7 @@ class c3183613A3
 		{
 			Simulation sim = new Simulation(addVector);
 			sim.lruFixed();	
-			// sim.variableLRU();
+			sim.variableLRU();
 			// sim.fixedLRU();
 			// sim.variableClock();
 			// sim.fixedLRU();

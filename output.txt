@@ -1,125 +1,46 @@
 Process1.txt's idRank: 1
 Process2.txt's idRank: 2
+Process3.txt's idRank: 3
+Process4.txt's idRank: 4
 
 
-Process1.txt_1 has gotten service time at 6
-Process2.txt_1 has gotten service time at 7
 
-Process1.txt_2 has gotten service time at 13
 
-Process2.txt_2 has gotten service time at 14
 
-Process1.txt_3 has gotten service time at 20
 
-Process2.txt_3 has gotten service time at 21
 
-Process1.txt_4 has gotten service time at 27
 
-Process2.txt_4 has gotten service time at 28
 
-Process1.txt_5 has gotten service time at 34
 
-Process2.txt_5 has gotten service time at 35
 
-Process1.txt_6 has gotten service time at 41
 
-Process2.txt_6 has gotten service time at 42
 
-Process1.txt_7 has gotten service time at 48
 
-Process2.txt_7 has gotten service time at 49
 
-Process1.txt_8 has gotten service time at 55
-
-Process2.txt_8 has gotten service time at 56
-
-Process1.txt_9 has gotten service time at 62
-
-Process2.txt_9 has gotten service time at 63
-
-Process1.txt_10 has gotten service time at 69
-
-Process2.txt_10 has gotten service time at 70
-
-Process1.txt_11 has gotten service time at 76
-
-Process2.txt_11 has gotten service time at 77
-
-Process1.txt_12 has gotten service time at 83
-
-Process2.txt_12 has gotten service time at 84
-
-Process1.txt_13 has gotten service time at 90
-
-Process2.txt_13 has gotten service time at 91
-
-Process1.txt_14 has gotten service time at 97
-
-Process2.txt_14 has gotten service time at 98
-
-Process1.txt_15 has gotten service time at 104
-
-Process2.txt_15 has gotten service time at 105
-swapping Process1.txt_1 with Process1.txt_16
-Process1.txt_16 has gotten service time at 111
-swapping Process2.txt_1 with Process2.txt_16
-Process2.txt_16 has gotten service time at 112
-swapping Process1.txt_2 with Process1.txt_17
-Process1.txt_17 has gotten service time at 118
-swapping Process2.txt_2 with Process2.txt_17
-Process2.txt_17 has gotten service time at 119
-swapping Process1.txt_3 with Process1.txt_18
-Process1.txt_18 has gotten service time at 125
-swapping Process2.txt_3 with Process2.txt_18
-Process2.txt_18 has gotten service time at 126
-swapping Process1.txt_4 with Process1.txt_19
-Process1.txt_19 has gotten service time at 132
-swapping Process2.txt_4 with Process2.txt_19
-Process2.txt_19 has gotten service time at 133
-swapping Process1.txt_5 with Process1.txt_20
-Process1.txt_20 has gotten service time at 139
-swapping Process2.txt_5 with Process2.txt_20
-Process2.txt_20 has gotten service time at 140
-swapping Process1.txt_6 with Process1.txt_21
-Process1.txt_21 has gotten service time at 146
-swapping Process2.txt_6 with Process2.txt_21
-Process2.txt_21 has gotten service time at 147
-swapping Process1.txt_7 with Process1.txt_22
-Process1.txt_22 has gotten service time at 153
-swapping Process2.txt_7 with Process2.txt_22
-Process2.txt_22 has gotten service time at 154
-swapping Process1.txt_8 with Process1.txt_23
-Process1.txt_23 has gotten service time at 160
-swapping Process2.txt_8 with Process2.txt_23
-Process2.txt_23 has gotten service time at 161
-swapping Process1.txt_9 with Process1.txt_24
-Process1.txt_24 has gotten service time at 167
-swapping Process2.txt_9 with Process2.txt_24
-Process2.txt_24 has gotten service time at 168
-swapping Process1.txt_10 with Process1.txt_25
-Process1.txt_25 has gotten service time at 174
-swapping Process2.txt_10 with Process2.txt_25
-Process2.txt_25 has gotten service time at 175
-swapping Process1.txt_11 with Process1.txt_26
-Process1.txt_26 has gotten service time at 181
-swapping Process2.txt_11 with Process2.txt_26
-Process2.txt_26 has gotten service time at 182
-swapping Process1.txt_12 with Process1.txt_27
-Process1.txt_27 has gotten service time at 188
-swapping Process2.txt_12 with Process2.txt_27
-Process2.txt_27 has gotten service time at 189
-swapping Process1.txt_13 with Process1.txt_28
-Process1.txt_28 has gotten service time at 195
-swapping Process2.txt_13 with Process2.txt_28
-Process2.txt_28 has gotten service time at 196
-swapping Process1.txt_14 with Process1.txt_29
-Process1.txt_29 has gotten service time at 202
-swapping Process2.txt_14 with Process2.txt_29
-Process2.txt_29 has gotten service time at 203
-swapping Process1.txt_15 with Process1.txt_30
-Process1.txt_30 has gotten service time at 209
-swapping Process2.txt_15 with Process2.txt_30
-Process2.txt_30 has gotten service time at 210
+LRU Fixed:
 PID  Turnaround Time  # Faults  Fault times
-1		210				30		{0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98, 105, 112, 119, 126, 133, 140, 147, 154, 161, 168, 175, 182, 189, 196, 203}
-2		211				30		{0, 8, 15, 22, 29, 36, 43, 50, 57, 64, 71, 78, 85, 92, 99, 106, 113, 120, 127, 134, 141, 148, 155, 162, 169, 176, 183, 190, 197, 204}
+1		39				5		{0, 7, 16, 23, 30}
+2		38				5		{0, 8, 17, 24, 31}
+3		18				1		{0}
+4		37				4		{0, 12, 19, 28}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LRU Variable:
+PID  Turnaround Time  # Faults  Fault times
+1		39				5		{0, 7, 16, 23, 30}
+2		38				5		{0, 8, 17, 24, 31}
+3		18				1		{0}
+4		37				4		{0, 12, 19, 28}

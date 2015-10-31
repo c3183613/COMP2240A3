@@ -98,7 +98,7 @@ class Processor
 	public void run(Process p, Vector<Page> lru)
 	{
 		// execute page
-		p.pages.firstElement().execute(getTime());
+		// p.pages.firstElement().execute(getTime());
 		// move page instance in lru to end of lru
 		for(int i=0;i<lru.size();i++)
 		{
