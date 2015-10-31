@@ -101,7 +101,6 @@ class Simulation
 				// reset blocked time and add to ready queue
 				bQ.get(i).rBlockedTime();
 				rQ.add(bQ.get(i));
-				System.out.println(bQ.firstElement().pages.firstElement().getID()+" added ");
 				// if there is free space for process
 				if(processor.freeSpace(bQ.get(i)))
 				{
