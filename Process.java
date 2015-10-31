@@ -37,7 +37,7 @@ class Process
 		blockedTime = 0;
 		// Used for sort id
 		idRank = Integer.parseInt(procID.substring(7, procID.indexOf(".")));
-		// System.out.println(procID+"'s idRank: "+idRank);
+		System.out.println(procID+"'s idRank: "+idRank);
 	}
 
 	Process(String newProcID, int newArrivalTime, int newExecTime)

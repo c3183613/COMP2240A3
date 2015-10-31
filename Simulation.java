@@ -47,20 +47,19 @@ class Simulation
 				{
 					// if it does,
 					// run it. Also moves to end of lru
-					processor.run(rQ.firstElement(), lru);
+					processor.run(rQ.firstElement(), lru.get(rQ.firstElement().getIDRank()-1));
 					roundRobin++;
+					// increment time
+					processor.incrTime();
 					// if Process has no more pages after processing, remove it from the queue
 					if(rQ.firstElement().pages.size() == 0)
 					{
-						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() + "\t\t"  + (processor.getTime()+1) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
+						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() + "\t\t"  + (processor.getTime()) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
 						+ rQ.firstElement().getFaultTimesString();
 						rQ.remove(0);
 					}
-					// increment time
-					processor.incrTime();
 					// increment blocked queue
 					incrBQ(bQ, rQ, processor, lru);
-					processor.print();
 				}
 				// memory does not contain the page, add to blocked queue and write page fault
 				else
@@ -82,7 +81,6 @@ class Simulation
 				// increment time
 				processor.incrTime();
 				incrBQ(bQ, rQ, processor, lru);
-				processor.print();
 			}
 		}//finished while loop
 		print();
@@ -108,12 +106,12 @@ class Simulation
 				if(processor.freeSpace(bQ.get(i)))
 				{
 					// occupy that free space
-					processor.occupy(bQ.get(i), lru);
+					processor.occupy(bQ.get(i), lru.get(bQ.get(i).getIDRank()-1));
 				}
 				else
 				{
 					// otherwise, swap with least recently used
-					processor.lruSwap(bQ.get(i), lru);
+					processor.lruSwap(bQ.get(i), lru.get(bQ.get(i).getIDRank()-1));
 				}
 				// remove from blocked queue and decrement
 				bQ.remove(i);
@@ -137,7 +135,6 @@ class Simulation
 			else
 			{
 				// increment time, 
-				incrBQ(bQ, rQ, )
 			}
 		}
 	}
