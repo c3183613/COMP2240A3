@@ -8,7 +8,7 @@ class Page
 
 	Page(String newID)
 	{
-		pageID = newID;
+		pageID = newID.substring(7, newID.length());
 		inMain = false;
 	}
 

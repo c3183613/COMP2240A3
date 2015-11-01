@@ -1,46 +1,199 @@
-Process1.txt's idRank: 1
-Process2.txt's idRank: 2
-Process3.txt's idRank: 3
-Process4.txt's idRank: 4
+
+1_4 has been faulted
+Before page fault
+MEMORY at 0
+{}
+After page fault
+MEMORY at 0
+{}
+
+2_13 has been faulted
+Before page fault
+MEMORY at 0
+{}
+After page fault
+MEMORY at 0
+{}
+1_4 has been added at 6
+
+2_13 has been added at 6
+
+1_4 has gotten service time at 6
+
+1_2 has been faulted
+Before page fault
+MEMORY at 7
+{1_4, 2_13}
+After page fault
+MEMORY at 7
+{1_4, 2_13}
+2_13 has gotten service time at 7
+
+2_5 has been faulted
+Before page fault
+MEMORY at 8
+{1_4, 2_13}
+After page fault
+MEMORY at 8
+{1_4, 2_13}
+1_2 has been added at 13
+
+1_2 has gotten service time at 13
+2_5 has been added at 14
 
 
+1_6 has been faulted
+Before page fault
+MEMORY at 14
+{1_4, 1_2, 2_13, 2_5}
+After page fault
+MEMORY at 14
+{1_4, 1_2, 2_13, 2_5}
+2_5 has gotten service time at 14
+
+2_11 has been faulted
+Before page fault
+MEMORY at 15
+{1_4, 1_2, 2_13, 2_5}
+After page fault
+MEMORY at 15
+{1_4, 1_2, 2_13, 2_5}
+1_6 has been added at 20
+
+1_6 has gotten service time at 20
+2_11 has been added at 21
 
 
+1_1 has been faulted
+Before page fault
+MEMORY at 21
+{1_4, 1_2, 1_6, 2_13, 2_5, 2_11}
+After page fault
+MEMORY at 21
+{1_4, 1_2, 1_6, 2_13, 2_5, 2_11}
+2_11 has gotten service time at 21
 
+2_12 has been faulted
+Before page fault
+MEMORY at 22
+{1_4, 1_2, 1_6, 2_13, 2_5, 2_11}
+After page fault
+MEMORY at 22
+{1_4, 1_2, 1_6, 2_13, 2_5, 2_11}
+1_1 has been added at 27
 
+1_1 has gotten service time at 27
+2_12 has been added at 28
 
+1_1 has gotten service time at 28
 
+1_5 has been faulted
+Before page fault
+MEMORY at 29
+{1_4, 1_2, 1_6, 1_1, 2_13, 2_5, 2_11, 2_12}
+After page fault
+MEMORY at 29
+{1_4, 1_2, 1_6, 1_1, 2_13, 2_5, 2_11, 2_12}
+2_12 has gotten service time at 29
 
+2_8 has been faulted
+Before page fault
+MEMORY at 30
+{1_4, 1_2, 1_6, 1_1, 2_13, 2_5, 2_11, 2_12}
+After page fault
+MEMORY at 30
+{1_4, 1_2, 1_6, 1_1, 2_13, 2_5, 2_11, 2_12}
+1_5 has been added at 35
 
+1_5 has gotten service time at 35
+2_8 has been added at 36
 
+2_8 has gotten service time at 36
 
+2_2 has been faulted
+Before page fault
+MEMORY at 37
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8}
+After page fault
+MEMORY at 37
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8}
+2_2 has been added at 43
 
+2_2 has gotten service time at 43
+2_8 has gotten service time at 44
+2_2 has gotten service time at 45
+2_8 has gotten service time at 46
+2_5 has gotten service time at 47
+2_8 has gotten service time at 48
 
+2_14 has been faulted
+Before page fault
+MEMORY at 49
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8, 2_2}
+After page fault
+MEMORY at 49
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8, 2_2}
+2_14 has been added at 55
 
+2_14 has gotten service time at 55
+2_14 has gotten service time at 56
+
+2_7 has been faulted
+Before page fault
+MEMORY at 57
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8, 2_2, 2_14}
+After page fault
+MEMORY at 57
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8, 2_2, 2_14}
+2_7 has been added at 63
+
+2_7 has gotten service time at 63
+
+2_4 has been faulted
+Before page fault
+MEMORY at 64
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8, 2_2, 2_14, 2_7}
+After page fault
+MEMORY at 64
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8, 2_2, 2_14, 2_7}
+2_4 has been added at 70
+
+2_4 has gotten service time at 70
+2_5 has gotten service time at 71
+2_8 has gotten service time at 72
+2_4 has gotten service time at 73
+2_5 has gotten service time at 74
+2_12 has gotten service time at 75
+2_11 has gotten service time at 76
+2_2 has gotten service time at 77
+2_14 has gotten service time at 78
+
+2_10 has been faulted
+Before page fault
+MEMORY at 79
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8, 2_2, 2_14, 2_7, 2_4}
+After page fault
+MEMORY at 79
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8, 2_2, 2_14, 2_7, 2_4}
+2_10 has been added at 85
+
+2_10 has gotten service time at 85
+2_13 has gotten service time at 86
+2_4 has gotten service time at 87
+2_7 has gotten service time at 88
+
+2_9 has been faulted
+Before page fault
+MEMORY at 89
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8, 2_2, 2_14, 2_7, 2_4, 2_10}
+After page fault
+MEMORY at 89
+{1_4, 1_2, 1_6, 1_1, 1_5, 2_13, 2_5, 2_11, 2_12, 2_8, 2_2, 2_14, 2_7, 2_4, 2_10}
+2_9 has been added at 95
+
+2_9 has gotten service time at 95
+2_8 has gotten service time at 96
 LRU Fixed:
 PID  Turnaround Time  # Faults  Fault times
-1		39				5		{0, 7, 16, 23, 30}
-2		38				5		{0, 8, 17, 24, 31}
-3		18				1		{0}
-4		37				4		{0, 12, 19, 28}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-LRU Variable:
-PID  Turnaround Time  # Faults  Fault times
-1		39				5		{0, 7, 16, 23, 30}
-2		38				5		{0, 8, 17, 24, 31}
-3		18				1		{0}
-4		37				4		{0, 12, 19, 28}
+1		36				5		{0, 7, 14, 21, 29}
+2		97				11		{0, 8, 15, 22, 30, 37, 49, 57, 64, 79, 89}

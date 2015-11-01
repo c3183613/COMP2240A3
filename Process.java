@@ -24,7 +24,8 @@ class Process
 	// Used for assignment 3
 	Process(String newProcName)
 	{
-		procID = newProcName;
+		procID = newProcName.substring(0, newProcName.length()-4);
+		// System.out.println("procID: "+ procID);
 		arrivalTime = 0;
 		execTime = -1;
 		servTime = -1;
@@ -36,8 +37,8 @@ class Process
 		pages = new Vector<Page>();
 		blockedTime = 0;
 		// Used for sort id
-		idRank = Integer.parseInt(procID.substring(7, procID.indexOf(".")));
-		System.out.println(procID+"'s idRank: "+idRank);
+		idRank = Integer.parseInt(procID.substring(7, procID.length()));
+		// System.out.println(procID+"'s idRank: "+idRank);
 	}
 
 	Process(String newProcID, int newArrivalTime, int newExecTime)

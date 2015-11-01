@@ -90,15 +90,24 @@ class Processor
 		}
 		// remove
 		lru.remove(0);
+		// remove any prior instances of recently used page
+		for(int i=0; i<lru.size();i++)
+		{
+			if(lru.get(i).equals(p.pages.firstElement()))
+			{
+				lru.remove(i);
+			}
+		}
 		// add to end of lru
 		lru.add(p.pages.firstElement());
 	}
 
-	// 
+	// run page, remove any previous instances of page in lru
+	// add page to end of lru
 	public void run(Process p, Vector<Page> lru)
 	{
 		// execute page
-		// p.pages.firstElement().execute(getTime());
+		p.pages.firstElement().execute(getTime());
 		// move page instance in lru to end of lru
 		for(int i=0;i<lru.size();i++)
 		{
@@ -111,5 +120,64 @@ class Processor
 		lru.add(p.pages.firstElement());
 		// remove page from process
 		p.pages.remove(0);
+	}
+
+	// returns where the index of the first taken memory is
+	public int firstOccupied()
+	{
+		if(occupied() > 0)
+		{
+			int i=0;
+			while(i<MEMORYSIZE)
+			{
+				if(frames[i].isOccupied())
+					break;
+				i++;
+			}
+			return i;
+		}
+		else
+			return -1;
+	}
+
+	// returns how many frames have been occupied
+	public int occupied()
+	{
+		int occupied=0;
+		for(int i=0; i<MEMORYSIZE; i++)
+		{
+			if(frames[i].isOccupied())
+				occupied++;
+		}
+		return occupied;
+	}
+
+	// Prints taken frames
+	public void print()
+	{
+		System.out.println("MEMORY at "+getTime());
+		if(occupied() > 1)
+		{
+			String s = "{" + frames[firstOccupied()].getHolding().getID();
+			for(int i=firstOccupied()+1; i<MEMORYSIZE; i++)
+			{
+				if(frames[i].isOccupied())
+				{
+					s+= ", " + frames[i].getHolding().getID();
+				}
+			}
+			s+="}";
+			System.out.println(s);
+		}
+		else if(occupied() == 2)
+		{
+
+		}
+		else if(occupied() == 1)
+			System.out.println("{"+frames[firstOccupied()].getHolding().getID()+"}");
+		else
+		{
+			System.out.println("{}");
+		}
 	}
 }

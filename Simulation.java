@@ -56,6 +56,7 @@ class Simulation
 						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() + "\t\t"  + (processor.getTime()) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
 						+ rQ.firstElement().getFaultTimesString();
 						rQ.remove(0);
+						roundRobin=0;
 					}
 					// increment blocked queue
 					incrBQ(bQ, rQ, processor, lru);
@@ -63,6 +64,10 @@ class Simulation
 				// memory does not contain the page, add to blocked queue and write page fault
 				else
 				{
+					System.out.println("\n"+rQ.get(0).pages.firstElement().getID()+" has been faulted");
+					System.out.println("Before page fault");
+					processor.print();
+
 					// reset rr
 					roundRobin = 0;
 					// add page fault at this time
@@ -71,6 +76,9 @@ class Simulation
 					bQ.add(rQ.get(0));
 					// remove from ready queue
 					rQ.remove(0);
+					System.out.println("After page fault");
+					processor.print();
+
 				}
 			}
 			// rQ.size == 0
@@ -98,6 +106,7 @@ class Simulation
 			// if blocked time is finished
 			if(bQ.get(i).getBlockedTime() == 6)
 			{
+				System.out.println(bQ.get(i).pages.firstElement().getID()+" has been added at "+processor.getTime());
 				// reset blocked time and add to ready queue
 				bQ.get(i).rBlockedTime();
 				rQ.add(bQ.get(i));
