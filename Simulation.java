@@ -52,7 +52,7 @@ class Simulation
 					processor.incrTime();
 					// if Process has no more pages after processing, remove it from the queue
 					if(rQ.firstElement().pages.size() == 0)
-					{
+													{
 						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() + "\t\t"  + (processor.getTime()) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
 						+ rQ.firstElement().getFaultTimesString();
 						rQ.remove(0);
@@ -64,9 +64,9 @@ class Simulation
 				// memory does not contain the page, add to blocked queue and write page fault
 				else
 				{
-					System.out.println("\n"+rQ.get(0).pages.firstElement().getID()+" has been faulted");
-					System.out.println("Before page fault");
-					processor.print();
+					// System.out.println("\n"+rQ.get(0).pages.firstElement().getID()+" has been faulted");
+					// System.out.println("Before page fault");
+					// processor.print();
 
 					// reset rr
 					roundRobin = 0;
@@ -76,8 +76,8 @@ class Simulation
 					bQ.add(rQ.get(0));
 					// remove from ready queue
 					rQ.remove(0);
-					System.out.println("After page fault");
-					processor.print();
+					// System.out.println("After page fault");
+					// processor.print();
 
 				}
 			}
@@ -106,7 +106,7 @@ class Simulation
 			// if blocked time is finished
 			if(bQ.get(i).getBlockedTime() == 6)
 			{
-				System.out.println(bQ.get(i).pages.firstElement().getID()+" has been added at "+processor.getTime());
+				// System.out.println(bQ.get(i).pages.firstElement().getID()+" has been added at "+processor.getTime());
 				// reset blocked time and add to ready queue
 				bQ.get(i).rBlockedTime();
 				rQ.add(bQ.get(i));
@@ -128,47 +128,19 @@ class Simulation
 		}
 	}
 
-	private void incrBQVariable(Vector<Process> bQ, Vector<Process> rQ, Processor processor, Vector<Page> lru)
-	{
-		// for each process that is blocked
-		for(int i=0; i<bQ.size(); i++)
-		{
-			// increment the time
-			bQ.get(i).incrBlockedTime();
-			// if blocked time is finished
-			if(bQ.get(i).getBlockedTime() == 6)
-			{
-				// reset blocked time and add to ready queue
-				bQ.get(i).rBlockedTime();
-				rQ.add(bQ.get(i));
-				// if there is free space for process
-				if(processor.freeSpace(bQ.get(i)))
-				{
-					// occupy that free space
-					processor.occupy(bQ.get(i), lru);
-				}
-				else
-				{
-					// otherwise, swap with least recently used
-					processor.lruSwap(bQ.get(i), lru);
-				}
-				// remove from blocked queue and decrement
-				bQ.remove(i);
-				i--;
-			}
-		}
-	}
-
-	public void variableLRU()
+	public void lruVariable()
 	{
 		Vector<Process> rQ = cpVector(masterVector);
 		Vector<Process> bQ = new Vector<Process>();
 		Vector<Page> lru = new Vector<Page>();
+		processor = new Processor();
 		getRangeVariable(rQ);
 		int roundRobin = 0;
-		Processor processor = new Processor();
+		// while there are Pages still to be executed
 		while(rQ.size()>0 || bQ.size()>0)
 		{
+			// if roundrobin = 3, remove from head of queue and most to end
+			// reset counter
 			if(roundRobin == 3)
 			{
 				rQ.add(rQ.get(0));
@@ -190,20 +162,36 @@ class Simulation
 					// if Process has no more pages after processing, remove it from the queue
 					if(rQ.firstElement().pages.size() == 0)
 					{
+						// add for printing
 						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() + "\t\t"  + (processor.getTime()) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
-						+ rQ.firstElement().getFaultTimesString();
+														+ rQ.firstElement().getFaultTimesString();
+						// free memory and remove from						
+						processor.removeFromMemory(rQ.firstElement(), lru);
+						// System.out.println(rQ.get(0).getID()+"'s pages removed from lru and main memory");
 						rQ.remove(0);
+						// reset roundRobin
+						roundRobin = 0;
 					}
 					// increment blocked queue
 					incrBQVariable(bQ, rQ, processor, lru);
 				}
 				// memory does not contain the page, add to blocked queue and write page fault
+				// reserve memory space for that page to get access to
 				else
 				{
+					// test
+					// System.out.println(rQ.get(0).pages.firstElement().getID() + " fault at " + processor.getTime());
+					// System.out.println("Before fault:");
+					// processor.print();
 					// reset rr
 					roundRobin = 0;
 					// add page fault at this time
 					rQ.get(0).addFault(processor.getTime());
+					// Must reserve the slot that it is going to take
+					if(processor.freeSpace(rQ.get(0)))
+						processor.reserve(rQ.get(0), lru);
+					else
+						processor.lruSwapVariable(rQ.get(0), lru);
 					// add to blocked queue
 					bQ.add(rQ.get(0));
 					// remove from ready queue
@@ -219,8 +207,34 @@ class Simulation
 				incrBQVariable(bQ, rQ, processor, lru);
 			}
 		}
-		System.out.println("LRU Variable:");
+		System.out.println("\n\nLRU Variable:");
 		print();
+	}
+
+	private void incrBQVariable(Vector<Process> bQ, Vector<Process> rQ, Processor processor, Vector<Page> lru)
+	{
+		// for each process that is blocked
+		for(int i=0; i<bQ.size(); i++)
+		{
+			// increment the time
+			bQ.get(i).incrBlockedTime();
+			// if blocked time is finished
+			if(bQ.get(i).getBlockedTime() == 6)
+			{
+				// reset blocked time and add to ready queue
+				bQ.get(i).rBlockedTime();
+				rQ.add(bQ.get(i));
+				// if there is free space for process
+				if(processor.spaceFor(bQ.get(i)))
+				{
+					// occupy that free space
+					processor.occupyVariable(bQ.get(i), lru);
+				}
+				// remove from blocked queue and decrement
+				bQ.remove(i);
+				i--;
+			}
+		}
 	}
 
 	public void getRangeVariable(Vector<Process> vector)
@@ -240,8 +254,9 @@ class Simulation
 		int roundRobin = 0;
 		Vector<Process> rQ = cpVector(masterVector);
 		Vector<Process> bQ = new Vector<Process>();
+		getRangeVariable(rQ);
 		// circular linked list
-		CircLinkedList cLL = new CircLinkedList();
+		CircLinkedList cLL = new CircLinkedList(30);
 		// While there are Processes that have not finished
 		while(rQ.size() > 0 || bQ.size() > 0)
 		{
@@ -252,143 +267,16 @@ class Simulation
 				rQ.remove(0);
 				roundRobin = 0;
 			}
-			// if there is anything in the ready queue
-			if(rQ.size() > 0)
+			if(rQ.size()>0)
 			{
-				// memory contains the first element we want to run from pages
-				if(cLL.contains(rQ.firstElement().pages.firstElement()))
-				{
-					// run
-					cLL.run(rQ.firstElement());
-					roundRobin++;
-					// if rQ's first element no longer has any pages left, remove
-					if(rQ.firstElement().pages.size() == 0)
-					{
-						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() + "\t\t" + (processor.getTime()+1)+"\t\t\t\t"
-							+rQ.firstElement().getFaultTimes().size()+"\t\t"+rQ.firstElement().getFaultTimesString();
-						rQ.remove(0);
-					}
-					// increment time
-					cLL.incrTime();
-					// System.out.println("Time incremented: "+cLL.getTime());
-					// increment blocked queue time
-					for(int i=0; i<bQ.size(); i++)
-					{
-						// increment blocked time for i
-						bQ.get(i).incrBlockedTime();
-						if(bQ.get(i).getBlockedTime() == 6)
-						{
-							// reset blocked time
-							bQ.get(i).rBlockedTime();
-							// add to ready queue
-							rQ.add(bQ.get(i));
-							// if 'processor' is not full
-							if(cLL.size()<30)
-							{
-								cLL.add(new Node(bQ.get(i).pages.firstElement()));
-							}
-							// size is full
-							else 
-							{
-								cLL.swap(bQ.get(i).pages.firstElement());
-							}
-							// remove from blocked queue
-							bQ.remove(i);
-							// set counter back to not miss any processes
-							i--;
-						}
-					}
-				}
-				// next page to run is not in main memory
-				else
-				{
-					roundRobin = 0;
-					// System.out.println(rQ.firstElement().getID()+" with " 
-						// + rQ.firstElement().pages.firstElement().getID() + " has been blocked at "+cLL.getTime());
-					rQ.firstElement().addFault(cLL.getTime());
-					bQ.add(rQ.firstElement());
-					rQ.remove(0);
-				}
+
 			}
-			// no processes in rQ
 			else
 			{
-				roundRobin = 0;
-				//increment time
 				cLL.incrTime();
-				// System.out.println("Time incremented: "+cLL.getTime());
-				bQ.firstElement().incrBlockedTime();
-				// first element ready to add to ready queue
-				if(bQ.firstElement().getBlockedTime() == 6)
-				{
-					bQ.firstElement().rBlockedTime();
-					rQ.add(bQ.get(0));
-					// add to main memory
-					if(cLL.size()<30)
-					{
-						cLL.add(new Node(bQ.firstElement().pages.firstElement()));
-					}
-					// size is full
-					else 
-					{
-						cLL.swap(bQ.firstElement().pages.firstElement());
-					}
-					bQ.remove(0);
-					for(int i=0;i<bQ.size();i++)
-					{
-						bQ.get(i).incrBlockedTime();
-						// if blocked time equals 6
-						if(bQ.get(i).getBlockedTime() == 6)
-						{
-							// reset blocked time
-							bQ.get(i).rBlockedTime();
-							// add to ready queue
-							rQ.add(bQ.get(i));
-							// add to processor
-							if(cLL.size()<30)
-							{
-								cLL.add(new Node(bQ.get(i).pages.firstElement()));
-							}
-							// size is full
-							else 
-							{
-								cLL.swap(bQ.get(i).pages.firstElement());
-							}
-							bQ.remove(i);
-							i--;
-						}
-					}
-				}
-				else
-				{
-					for(int i=1;i<bQ.size();i++)
-					{
-						// increment blocked time
-						bQ.get(i).incrBlockedTime();
-						// if blocked time now equals 6
-						if(bQ.get(i).getBlockedTime() == 6)
-						{
-							// reset blocked time
-							bQ.get(i).rBlockedTime();
-							// add to ready queue
-							rQ.add(bQ.get(i));
-							// add to processor
-							if(cLL.size()<30)
-							{
-								cLL.add(new Node(bQ.get(i).pages.firstElement()));
-							}
-							// size is full
-							else 
-							{
-								cLL.swap(bQ.get(i).pages.firstElement());
-							}
-							bQ.remove(i);
-							i--;
-						}
-					}
-				}
+				incrBQClock(bQ, rQ, cLL);
 			}
-			cLL.print();
+			
 
 		} // end of while loop
 		// if circular linked list size < 30 and new page not already in queue
@@ -399,6 +287,32 @@ class Simulation
 			// swap
 		System.out.println("Clock - Variable:");
 		print();
+	}
+
+	public void incrBQClock(Vector<Process> bQ, Vector<Process> rQ, CircLinkedList cLL)
+	{
+		for(int i=0; i<bQ.size(); i++)
+		{
+			bQ.get(i).incrBlockedTime();
+			if(bQ.get(i).getBlockedTime() == 6)
+			{
+				// reset blocked time
+				bQ.get(i).rBlockedTime();
+				// add to ready queue
+				rQ.add(bQ.get(i));
+				// add to main memory
+				if(cLL.freeSpace(bQ.get(i)))
+				{
+					// occupy
+					// occupy.
+				}
+				else
+				{
+
+				}
+				// remove from blocked queue
+			}
+		}
 	}
 
 	private void print()
@@ -432,7 +346,7 @@ class Simulation
 		for(int j=0; j<master.size();j++)
 		{
 			master.get(j).memoryRange.add(i);
-			i+= Math.floor(30/master.size()-1);
+			i+= Math.floor(processor.MEMORYSIZE/master.size()-1);
 			master.get(j).memoryRange.add(i);
 			i++;
 			// System.out.println(j+"'s range: "+master.get(j).memoryRange.firstElement() + " to " +master.get(j).memoryRange.get(1));

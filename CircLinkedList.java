@@ -2,6 +2,7 @@ class CircLinkedList
 {
 	Node current, head, tail;
 	int time;
+	public static final int MEMORYSIZE = 30;
 
 	CircLinkedList()
 	{
@@ -42,18 +43,21 @@ class CircLinkedList
 			newData.setNext(head);
 			head.setPrev(newData);
 			tail = newData;
-			if(size() == 30)
+			if(size() == MEMORYSIZE)
 			{
 				current = head;
 			}
 		}
 	}
 
-	// NOT FINISHED
-	// is only used for fixedlru
-	public void occupy(Process process)
+	public boolean freeSpace(Process p)
 	{
-		// if()
+		for(int i=p.memoryRange.firstElement().intValue(); i<=p.memoryRange.get(1).intValue(); i++)
+		{
+			if(get(i).isEmpty())
+				return true;
+		}
+		return false;
 	}
 
 	// Should only be ran after contains(Page) and returned true
@@ -61,14 +65,26 @@ class CircLinkedList
 	public Node at(Page page)
 	{
 		Node temp = head;
-		for(int i=0; i<size();i++)
+		while(!temp.getNext().equals(head))
 		{
-			if(!temp.isEmpty())
-				if(temp.equals(page))
-					return temp;
-			temp=temp.getNext();
+			if(temp.equals(page))
+				break;
+			temp = temp.getNext();
 		}
-		return new Node();
+		return temp;
+	}
+
+	// Returns the node at i
+	public Node get(int i)
+	{
+		Node temp = head;
+		int j = 0;
+		while(j!=i)
+		{
+			temp = temp.getNext();
+			j++;
+		}
+		return temp;
 	}
 
 	// add to list
