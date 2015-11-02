@@ -102,8 +102,10 @@ class Processor
 		// System.out.println(lru.get(lru.size()-1).getID() + " has been added to lru and mainmemory");
 	}
 
+	// removes everything that p owned (pages) from lru and main memory
 	public void removeFromMemory(Process p, Vector<Page> lru)
 	{
+		// check each occupied frame in main memory, if it belongs to p, remove it
 		for(int i=0; i<MEMORYSIZE; i++)
 		{
 			if(frames[i].isOccupied())
@@ -160,13 +162,16 @@ class Processor
 		// System.out.println("About to swap " + p.pages.firstElement().getID() + " with " + lru.get(0).getID());
 		for(int i=p.memoryRange.firstElement().intValue(); i<=p.memoryRange.get(1).intValue(); i++)
 		{
-			if(frames[i].getHolding().equals(lru.get(0)))
+			if(frames[i].isOccupied())
 			{
-				// swap
-				frames[i].holdPage(p.pages.firstElement());
-				// reset reserved
-				frames[i].resetReserved();
-				break;
+				if(frames[i].getHolding().equals(lru.get(0)))
+				{
+					// swap
+					frames[i].holdPage(p.pages.firstElement());
+					// reset reserved
+					frames[i].resetReserved();
+					break;
+				}
 			}
 		}
 		lru.remove(0);
@@ -219,25 +224,6 @@ class Processor
 					break;
 				}
 			}
-		}
-		else
-		{
-
-			// System.out.println(lru.get(0).getID() + " to be swapped with "+p.pages.firstElement().getID());
-			// // find lru in frames and then reserve it for this process' page
-			// for(int i=0; i<MEMORYSIZE; i++)
-			// {
-			// 	if(frames[i].isOccupied())
-			// 	{
-			// 		if(frames[i].getHolding().equals(lru.get(0)))
-			// 		{
-			// 			frames[i].reserveFor(p.pages.firstElement());
-			// 			lru.add(lru.get(0));
-			// 			lru.remove(0);
-			// 			// just added this
-			// 		}
-			// 	}
-			// }
 		}
 	}
 

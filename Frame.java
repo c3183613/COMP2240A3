@@ -2,32 +2,22 @@ class Frame
 {
 	private String frameID;
 	private Page page;
-	private boolean occupied, reserved;
+	private boolean occupied, reserved, secondChance;
 	private Page reservedFor;
 
 	Frame(String newID)
 	{
 		// initialize occupied
 		frameID = newID;
-		occupied = reserved = false;
+		occupied = reserved = secondChance = false;
 		page = reservedFor = null;
 	}
 
-	public void setID(String newID)
-	{
-		frameID = newID;
-	}
 
+	// QUERY METHODS
 	public String getID()
 	{
 		return frameID;
-	}
-
-	public void holdPage(Page holdThis)
-	{
-		page = holdThis;
-		holdThis.setInMain(true);
-		occupied = true;
 	}
 
 	public Page getHolding()
@@ -40,15 +30,45 @@ class Frame
 		return reservedFor;
 	}
 
+	public boolean isOccupied()
+	{
+		return occupied;
+	}
+
+	public boolean hasSecondChance()
+	{
+		return secondChance;
+	}
+
+	public boolean isReserved()
+	{
+		return reserved;
+	}
+
+	public boolean isReservedFor(Page i)
+	{
+		if(reservedFor == i)
+			return true;
+		else
+			return false;
+	}
+	// MUTATOR METHODS
+	public void holdPage(Page holdThis)
+	{
+		page = holdThis;
+		holdThis.setInMain(true);
+		occupied = true;
+	}
+
 	public void finishedHolding()
 	{
 		page = null;
 		occupied = false;
 	}
 
-	public boolean isOccupied()
+	public void setID(String newID)
 	{
-		return occupied;
+		frameID = newID;
 	}
 
 	public void resetOccupied()
@@ -68,18 +88,6 @@ class Frame
 		reservedFor = null;
 	}
 
-	public boolean isReserved()
-	{
-		return reserved;
-	}
-
-	public boolean isReservedFor(Page i)
-	{
-		if(reservedFor == i)
-			return true;
-		else
-			return false;
-	}
 
 	public void setReserved(boolean i)
 	{
@@ -95,5 +103,15 @@ class Frame
 	public void setOccupied(boolean i)
 	{
 		occupied = i;
+	}
+
+	public void giveSecondChance()
+	{
+		secondChance = true;
+	}
+
+	public void takeSecondChance()
+	{
+		secondChance = false;
 	}
 }

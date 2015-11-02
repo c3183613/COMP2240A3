@@ -1,0 +1,19 @@
+LRU - Fixed:
+PID	Turnaround Time	# Faults	Fault Times
+1	36		5		{0, 7, 14, 21, 29}
+2	97		11		{0, 8, 15, 22, 30, 37, 49, 57, 64, 79, 89}
+
+LRU - Variable:
+PID	Turnaround Time	# Faults	Fault Times
+1	36		5		{0, 7, 14, 21, 29}
+2	97		11		{0, 8, 15, 22, 30, 37, 49, 57, 64, 79, 89}
+
+Clock - Fixed:
+PID	Turnaround Time	# Faults	Fault Times
+1	36		5		{0, 7, 14, 21, 29}
+2	97		11		{0, 8, 15, 22, 30, 37, 49, 57, 64, 79, 89}
+
+Clock - Variable:
+PID	Turnaround Time	# Faults	Fault Times
+1	36		5		{0, 7, 14, 21, 29}
+2	97		11		{0, 8, 15, 22, 30, 37, 49, 57, 64, 79, 89}

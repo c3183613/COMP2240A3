@@ -1,0 +1,31 @@
+NOTE: IN THIS SIMULATION A MEMOREY OF 30 FRAMES WAS ASSUMED
+
+
+LRU - Fixed:
+PID  Turnaround Time  # Faults  Fault Times  
+1    39                5         {0, 7, 14, 22, 31}
+2    75                8         {0, 8, 15, 23, 32, 45, 52, 59}
+3    33                3         {0, 9, 16}      
+4    84                9         {0, 10, 17, 27, 34, 44, 51, 58, 75}
+
+LRU - Variable:
+PID  Turnaround Time  # Faults  Fault Times  
+1    39                5         {0, 7, 14, 22, 31}
+2    75                8         {0, 8, 15, 23, 32, 45, 52, 59}
+3    33                3         {0, 9, 16}      
+4    78                8         {0, 10, 17, 27, 34, 44, 51, 58}
+
+Clock - Fixed:
+PID  Turnaround Time  # Faults  Fault Times  
+1    39                5         {0, 7, 14, 22, 31}
+2    75                8         {0, 8, 15, 23, 32, 45, 52, 59}
+3    33                3         {0, 9, 16}      
+4    84                9         {0, 10, 17, 27, 34, 44, 51, 58, 75}
+
+Clock - Variable:
+PID  Turnaround Time  # Faults  Fault Times  
+1    39                5         {0, 7, 14, 22, 31}
+2    75                8         {0, 8, 15, 23, 32, 45, 52, 59}
+3    33                3         {0, 9, 16}      
+4    78                8         {0, 10, 17, 27, 34, 44, 51, 58}
+

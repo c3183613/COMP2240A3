@@ -139,7 +139,7 @@ class Simulation
 		// while there are Pages still to be executed
 		while(rQ.size()>0 || bQ.size()>0)
 		{
-			// if roundrobin = 3, remove from head of queue and most to end
+			// if roundrobin = 3, remove from head of queue and put to end
 			// reset counter
 			if(roundRobin == 3)
 			{
@@ -167,7 +167,6 @@ class Simulation
 														+ rQ.firstElement().getFaultTimesString();
 						// free memory and remove from						
 						processor.removeFromMemory(rQ.firstElement(), lru);
-						// System.out.println(rQ.get(0).getID()+"'s pages removed from lru and main memory");
 						rQ.remove(0);
 						// reset roundRobin
 						roundRobin = 0;
@@ -179,10 +178,6 @@ class Simulation
 				// reserve memory space for that page to get access to
 				else
 				{
-					// test
-					// System.out.println(rQ.get(0).pages.firstElement().getID() + " fault at " + processor.getTime());
-					// System.out.println("Before fault:");
-					// processor.print();
 					// reset rr
 					roundRobin = 0;
 					// add page fault at this time
@@ -190,6 +185,7 @@ class Simulation
 					// Must reserve the slot that it is going to take
 					if(processor.freeSpace(rQ.get(0)))
 						processor.reserve(rQ.get(0), lru);
+					// swap immediately as lru will not be used
 					else
 						processor.lruSwapVariable(rQ.get(0), lru);
 					// add to blocked queue
@@ -246,50 +242,61 @@ class Simulation
 		}
 	}
 
-	// sim.fixedClock();
-
-	// Variable allocation global replacement
-	public void variableClock()
+	public void fixedClock()
 	{
 		int roundRobin = 0;
 		Vector<Process> rQ = cpVector(masterVector);
 		Vector<Process> bQ = new Vector<Process>();
-		getRangeVariable(rQ);
-		// circular linked list
-		CircLinkedList cLL = new CircLinkedList(30);
-		// While there are Processes that have not finished
-		while(rQ.size() > 0 || bQ.size() > 0)
+		ClockProcessor processor = new ClockProcessor();
+		getRange(rQ);
+		// Runs while there are still pages that need to be executed
+		while(rQ.size() > 0 || bQ.size() > 0)		
 		{
-			// each process can have 3 ticks of cpu
+			// Move to back of queue
 			if(roundRobin == 3)
 			{
 				rQ.add(rQ.get(0));
 				rQ.remove(0);
 				roundRobin = 0;
 			}
-			if(rQ.size()>0)
+			if(rQ.size() > 0)
 			{
-
+				if(processor.contains(rQ.firstElement()))
+				{
+					// execute page in memory
+					processor.run(rQ.get(0));
+					if(rQ.firstElement().pages.size() == 0)
+					{
+						// remove from rQ
+						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() + "\t\t"  + (processor.getTime()) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
+														+ rQ.firstElement().getFaultTimesString();
+						rQ.remove(0);
+						roundRobin = 0;
+					}
+					incrBQClock(bQ, rQ, processor);
+				}
+				else
+				{
+					roundRobin = 0;
+					// 
+				}
 			}
+			// nothing in rQ
 			else
 			{
-				cLL.incrTime();
-				incrBQClock(bQ, rQ, cLL);
+				roundRobin = 0;
+				processor.incrTime();
+				// incrBQClock
+				incrBQClock(bQ, rQ, processor);
 			}
-			
-
-		} // end of while loop
-		// if circular linked list size < 30 and new page not already in queue
-			// add it in
-		// else if in list
-			// give star back
-		// else (only other condition is not in list)
-			// swap
-		System.out.println("Clock - Variable:");
-		print();
+		}
 	}
 
-	public void incrBQClock(Vector<Process> bQ, Vector<Process> rQ, CircLinkedList cLL)
+	// Variable allocation global replacement
+	public void variableClock() {}
+
+	// 
+	public void incrBQClock(Vector<Process> bQ, Vector<Process> rQ, ClockProcessor processor)
 	{
 		for(int i=0; i<bQ.size(); i++)
 		{
@@ -301,7 +308,7 @@ class Simulation
 				// add to ready queue
 				rQ.add(bQ.get(i));
 				// add to main memory
-				if(cLL.freeSpace(bQ.get(i)))
+				if(processor.freeSpace(bQ.get(i)))
 				{
 					// occupy
 					// occupy.
@@ -317,7 +324,7 @@ class Simulation
 
 	private void print()
 	{
-		// String temp[];
+		// print outputs
 		System.out.println("PID  Turnaround Time  # Faults  Fault times");
 		for(int i=0;i<masterVector.size();i++)
 		{
@@ -326,6 +333,7 @@ class Simulation
 	}
 
 
+	// deep copy of vector
 	private Vector<Process> cpVector(Vector<Process> master)
 	{
 		Vector<Process> returnVector = new Vector<Process>();
