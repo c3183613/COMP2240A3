@@ -2,7 +2,6 @@ import java.util.Vector;
 
 class Simulation
 {
-	Processor processor;
 	Vector<Process> masterVector;
 	int quantum;
 	String printArray[];
@@ -19,14 +18,14 @@ class Simulation
 		// initialization
 		Vector<Process> rQ = cpVector(masterVector);
 		Vector<Process> bQ = new Vector<Process>();
-		processor = new Processor();
+		Processor processor = new Processor();
 		printArray = new String[masterVector.size()];
 		Vector<Vector<Page>> lru = new Vector<Vector<Page>>();
 		for(Process p:rQ)
 		{
 			lru.add(new Vector<Page>());
 		}
-		getRange(rQ);
+		getRange(rQ, processor);
 		int roundRobin = 0;
 		// Run until all processes are finished
 		while(rQ.size() > 0 || bQ.size() > 0)
@@ -52,7 +51,7 @@ class Simulation
 					processor.incrTime();
 					// if Process has no more pages after processing, remove it from the queue
 					if(rQ.firstElement().pages.size() == 0)
-													{
+					{
 						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() + "\t\t"  + (processor.getTime()) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
 						+ rQ.firstElement().getFaultTimesString();
 						rQ.remove(0);
@@ -133,8 +132,8 @@ class Simulation
 		Vector<Process> rQ = cpVector(masterVector);
 		Vector<Process> bQ = new Vector<Process>();
 		Vector<Page> lru = new Vector<Page>();
-		processor = new Processor();
-		getRangeVariable(rQ);
+		Processor processor = new Processor();
+		getRangeVariable(rQ, processor);
 		int roundRobin = 0;
 		// while there are Pages still to be executed
 		while(rQ.size()>0 || bQ.size()>0)
@@ -233,22 +232,14 @@ class Simulation
 		}
 	}
 
-	public void getRangeVariable(Vector<Process> vector)
-	{
-		for(Process p: vector)
-		{
-			p.memoryRange.add(0);
-			p.memoryRange.add(processor.MEMORYSIZE-1);
-		}
-	}
-
 	public void fixedClock()
 	{
 		int roundRobin = 0;
 		Vector<Process> rQ = cpVector(masterVector);
 		Vector<Process> bQ = new Vector<Process>();
-		ClockProcessor processor = new ClockProcessor();
-		getRange(rQ);
+		ClockProcessor processor = new ClockProcessor(true);
+		processor.setArrow(rQ.size());
+		getRangeClock(rQ, processor);
 		// Runs while there are still pages that need to be executed
 		while(rQ.size() > 0 || bQ.size() > 0)		
 		{
@@ -259,26 +250,50 @@ class Simulation
 				rQ.remove(0);
 				roundRobin = 0;
 			}
+			// If there are things in the ready queue
 			if(rQ.size() > 0)
 			{
+				// If page is in main memory
 				if(processor.contains(rQ.firstElement()))
 				{
 					// execute page in memory
 					processor.run(rQ.get(0));
+					processor.incrTime();
+					roundRobin++;
+					// //---------------------------------------------------------
+					// String s="{";
+					// System.out.println("rQ: ");
+					// for(Process p:rQ)
+					// {
+					// 	s+=", " + p.getID();
+					// }
+					// System.out.println(s+"}");
+					// //---------------------------------------------------------
+					// check if Process still has more pages to run
 					if(rQ.firstElement().pages.size() == 0)
 					{
+						// System.out.println("\t" +rQ.get(0).getID()+" has finished");
 						// remove from rQ
 						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() + "\t\t"  + (processor.getTime()) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
 														+ rQ.firstElement().getFaultTimesString();
+						// remove from ready list
 						rQ.remove(0);
+						// reset roundrobin
 						roundRobin = 0;
 					}
 					incrBQClock(bQ, rQ, processor);
 				}
 				else
 				{
+					// System.out.println("Blocking " + rQ.firstElement().pages.get(0).getID() +"@"+processor.getTime());
+					// reset rr
 					roundRobin = 0;
-					// 
+					// fault time
+					rQ.firstElement().addFault(processor.getTime());
+					// add to bq
+					bQ.add(rQ.firstElement());
+					// remove from rq
+					rQ.remove(0);
 				}
 			}
 			// nothing in rQ
@@ -289,11 +304,50 @@ class Simulation
 				// incrBQClock
 				incrBQClock(bQ, rQ, processor);
 			}
-		}
+		} // end of while loop
+		System.out.println("Clock fixed:");
+		print();
 	}
 
 	// Variable allocation global replacement
-	public void variableClock() {}
+	public void variableClock()
+	{
+		int roundRobin = 0;
+		Vector<Process> rQ = cpVector(masterVector);
+		Vector<Process> bQ = new Vector<Process>();
+		ClockProcessor processor = new ClockProcessor(true);
+		processor.setArrow(rQ.size());
+		getRangeClockVariable(rQ, processor);
+		// Runs while there are still pages that need to be executed
+		while(rQ.size() > 0 || bQ.size() > 0)		
+		{
+			// Move to back of queue
+			if(roundRobin == 3)
+			{
+				rQ.add(rQ.get(0));
+				rQ.remove(0);
+				roundRobin = 0;
+			}
+			// If there are things in the ready queue
+			if(rQ.size() > 0)
+			{
+				if(rQ.contains(rQ.firstElement()))
+				{
+					// run
+					roundRobin++;
+
+				}
+				else
+				{
+					System.out.println();
+				}
+			}
+			else
+			{
+				System.out.println();
+			}
+		}
+	}
 
 	// 
 	public void incrBQClock(Vector<Process> bQ, Vector<Process> rQ, ClockProcessor processor)
@@ -309,15 +363,13 @@ class Simulation
 				rQ.add(bQ.get(i));
 				// add to main memory
 				if(processor.freeSpace(bQ.get(i)))
-				{
 					// occupy
-					// occupy.
-				}
+					processor.occupy(bQ.get(i));
 				else
-				{
-
-				}
+					processor.clockSwap(bQ.get(i));
 				// remove from blocked queue
+				bQ.remove(i);
+				i--;
 			}
 		}
 	}
@@ -348,7 +400,7 @@ class Simulation
 
 	// For each Process in master, set the range which the Process can enter in the main memory
 	// Only used for fixed
-	public void getRange(Vector<Process> master)
+	private void getRange(Vector<Process> master, Processor processor)
 	{
 		int i = 0;
 		for(int j=0; j<master.size();j++)
@@ -361,4 +413,34 @@ class Simulation
 		}
 	}
 
+	private void getRangeClock(Vector<Process> master, ClockProcessor processor)
+	{
+		int i = 0;
+		for(int j=0; j<master.size();j++)
+		{
+			master.get(j).memoryRange.add(i);
+			i+= Math.floor(processor.MEMORYSIZE/master.size()-1);
+			master.get(j).memoryRange.add(i);
+			i++;
+			// System.out.println(j+"'s range: "+master.get(j).memoryRange.firstElement() + " to " +master.get(j).memoryRange.get(1));
+		}
+	}
+
+	private void getRangeVariable(Vector<Process> vector, Processor processor)
+	{
+		for(Process p: vector)
+		{
+			p.memoryRange.add(0);
+			p.memoryRange.add(processor.MEMORYSIZE-1);
+		}
+	}
+
+	private void getRangeClockVariable(Vector<Process> rQ, ClockProcessor processor)
+	{
+		for(Process p: rQ)
+		{
+			p.memoryRange.add(0);
+			p.memoryRange.add(processor.MEMORYSIZE-1);
+		}
+	}
 }

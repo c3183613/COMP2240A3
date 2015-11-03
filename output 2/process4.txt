@@ -1,13 +1,13 @@
 begin
-5
-6
-3
-4
-9
-9
-8
-1
-2
+5 r
+6 r
+3 r
+4 r
+9 r
+9 r
+8 r
+1 r
+2 b - trying to swap @ 64 and line 167
 1
 4
 4

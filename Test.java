@@ -5,7 +5,11 @@ class Test
 		// System.out.println(cLL.tail.getData().getID());
 		// System.out.println(cLL.tail.getNext().getData().getID());
 
-		String hello[] = new String[30];
+		int hello[] = new int[30];
+		for(int i=0; i<30; i++)
+		{
+			hello[i] = -1;
+		}
 		// for(int i=0;i<30;i++)
 		// {
 		// 	hello[i] = "hello"+i;
