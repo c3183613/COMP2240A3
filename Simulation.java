@@ -260,28 +260,20 @@ class Simulation
 					processor.run(rQ.get(0));
 					processor.incrTime();
 					roundRobin++;
-					// //---------------------------------------------------------
-					// String s="{";
-					// System.out.println("rQ: ");
-					// for(Process p:rQ)
-					// {
-					// 	s+=", " + p.getID();
-					// }
-					// System.out.println(s+"}");
-					// //---------------------------------------------------------
 					// check if Process still has more pages to run
 					if(rQ.firstElement().pages.size() == 0)
 					{
 						// System.out.println("\t" +rQ.get(0).getID()+" has finished");
 						// remove from rQ
-						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() + "\t\t"  + (processor.getTime()) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
-														+ rQ.firstElement().getFaultTimesString();
+						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() 
+							+ "\t\t"  + (processor.getTime()) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
+							+ rQ.firstElement().getFaultTimesString();
 						// remove from ready list
 						rQ.remove(0);
 						// reset roundrobin
 						roundRobin = 0;
 					}
-					incrBQClock(bQ, rQ, processor);
+					incrBQClockFixed(bQ, rQ, processor);
 				}
 				else
 				{
@@ -301,23 +293,22 @@ class Simulation
 			{
 				roundRobin = 0;
 				processor.incrTime();
-				// incrBQClock
-				incrBQClock(bQ, rQ, processor);
+				// incrBQClockFixed
+				incrBQClockFixed(bQ, rQ, processor);
 			}
 		} // end of while loop
-		System.out.println("Clock fixed:");
+		System.out.println("\n\nClock fixed:");
 		print();
 	}
 
 	// Variable allocation global replacement
 	public void variableClock()
 	{
-		int roundRobin = 0;
 		Vector<Process> rQ = cpVector(masterVector);
 		Vector<Process> bQ = new Vector<Process>();
-		ClockProcessor processor = new ClockProcessor(true);
-		processor.setArrow(rQ.size());
+		ClockProcessor processor = new ClockProcessor(false);
 		getRangeClockVariable(rQ, processor);
+		int roundRobin = 0;
 		// Runs while there are still pages that need to be executed
 		while(rQ.size() > 0 || bQ.size() > 0)		
 		{
@@ -331,26 +322,57 @@ class Simulation
 			// If there are things in the ready queue
 			if(rQ.size() > 0)
 			{
-				if(rQ.contains(rQ.firstElement()))
+				// Page needed is in main memory
+				if(processor.contains(rQ.firstElement()))
 				{
 					// run
+					processor.run(rQ.firstElement());
+					processor.incrTime();
 					roundRobin++;
-
+					if(rQ.get(0).pages.size() == 0)
+					{
+						processor.removeFromMemory(rQ.firstElement());
+						// remove from rQ
+						printArray[rQ.firstElement().getIDRank()-1] = rQ.firstElement().getIDRank() 
+							+ "\t\t"  + (processor.getTime()) +"\t\t\t\t" + rQ.firstElement().getFaultTimes().size() +"\t\t"
+							+ rQ.firstElement().getFaultTimesString();
+						// remove from ready list
+						rQ.remove(0);
+						// reset roundrobin
+						roundRobin = 0;
+					}
+					incrBQClockVariable(bQ, rQ, processor);
 				}
-				else
+				else // not in main memory
 				{
-					System.out.println();
+					System.out.println("fault at " + processor.getTime());
+					roundRobin = 0;
+					if(processor.freeSpace(rQ.get(0)))
+						processor.reserve(rQ.get(0));
+					else
+						processor.clockSwap(rQ.get(0));
+					// fault time
+					rQ.firstElement().addFault(processor.getTime());
+					// add to bq
+					bQ.add(rQ.firstElement());
+					// remove from rq
+					rQ.remove(0);
 				}
 			}
 			else
 			{
-				System.out.println();
+				roundRobin = 0;
+				processor.incrTime();
+				incrBQClockVariable(bQ, rQ, processor);
 			}
+			processor.print();
 		}
+		System.out.println("\n\nClock Variable:");
+		print();
 	}
 
-	// 
-	public void incrBQClock(Vector<Process> bQ, Vector<Process> rQ, ClockProcessor processor)
+	//  Increment BQ blocked time for Fixed Clock
+	public void incrBQClockFixed(Vector<Process> bQ, Vector<Process> rQ, ClockProcessor processor)
 	{
 		for(int i=0; i<bQ.size(); i++)
 		{
@@ -365,6 +387,31 @@ class Simulation
 				if(processor.freeSpace(bQ.get(i)))
 					// occupy
 					processor.occupy(bQ.get(i));
+				else
+					processor.clockSwap(bQ.get(i));
+				// remove from blocked queue
+				bQ.remove(i);
+				i--;
+			}
+		}
+	}
+
+	//  Increment BQ for VariableClock
+	public void incrBQClockVariable(Vector<Process> bQ, Vector<Process> rQ, ClockProcessor processor)
+	{
+		for(int i=0; i<bQ.size(); i++)
+		{
+			bQ.get(i).incrBlockedTime();
+			if(bQ.get(i).getBlockedTime() == 6)
+			{
+				// reset blocked time
+				bQ.get(i).rBlockedTime();
+				// add to ready queue
+				rQ.add(bQ.get(i));
+				// add to main memory
+				if(processor.spaceFor(bQ.get(i)))
+					// occupy
+					processor.occupyVariable(bQ.get(i));
 				else
 					processor.clockSwap(bQ.get(i));
 				// remove from blocked queue

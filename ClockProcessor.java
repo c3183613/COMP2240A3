@@ -2,16 +2,17 @@ import java.util.Vector;
 
 class ClockProcessor
 {
-	public static final int MEMORYSIZE = 10;
-	private boolean isFixed;
+	public static final int MEMORYSIZE = 30;
+	private boolean isFixed, fullBefore;
 	private boolean multFullBefore[];
 	private Frame frames[] = new Frame[MEMORYSIZE];
 	private int time, arrow;
 	private int multArrow[];
 
-	ClockProcessor(boolean fixed)
+	ClockProcessor(boolean thisvalue)
 	{
-		isFixed = fixed;
+		fullBefore = false;
+		isFixed = thisvalue;
 		// FULLBEFORE make mutator methods for this - used for clock variable
 		// if true, do nothing. if false, set true
 		for(int i = 0; i<MEMORYSIZE; i++)
@@ -84,6 +85,17 @@ class ClockProcessor
 		return occupied;
 	}
 
+	// Used to see if there is a spot reserved for process
+	public boolean spaceFor(Process p)
+	{
+		for(int i=p.memoryRange.firstElement().intValue(); i<=p.memoryRange.get(1).intValue(); i++)
+		{
+			if(frames[i].isReservedFor(p.pages.firstElement()))
+				return true;
+		}
+		return false;
+	}
+
 	// MUTATOR METHODS
 	public void occupy(Process p)
 	{
@@ -93,32 +105,51 @@ class ClockProcessor
 			if(!frames[i].isOccupied() && !frames[i].isReserved())
 			{
 				frames[i].holdPage(p.pages.get(0));
+				frames[i].giveSecondChance();
 				break;
 			}
 		}
 		// Add to lru and check if memory space for process is full
 		// if memory space is full, move arrow to start of memory space for process
-		if(isFixed)
+		int index = (p.getIDRank()-1);
+		// if no more free space there, move arrow to starting value
+		if(!freeSpace(p))
 		{
-			int index = (p.getIDRank()-1);
-			// if no more free space there, move arrow to starting value
-			if(!freeSpace(p))
+			if(!multFullBefore[p.getIDRank()-1])
 			{
-				if(!multFullBefore[p.getIDRank()-1])
-				{
-					multArrow[index] = p.memoryRange.get(0).intValue();
-					multFullBefore[p.getIDRank()-1] = true;
-				}
-				else
-				{
-					incrArrow(p);
-				}
+				multArrow[index] = p.memoryRange.get(0).intValue();
+				multFullBefore[p.getIDRank()-1] = true;
+			}
+			else
+				incrArrow(p);
+		}
+	}
+
+	public void occupyVariable(Process p)
+	{
+		// System.out.println("adding "+p.pages.firstElement().getID()+"@"+getTime());
+		for(int i=p.memoryRange.get(0).intValue(); i <= p.memoryRange.get(1).intValue();i++)
+		{
+			if(frames[i].isReservedFor(p.pages.firstElement()))
+			{
+				frames[i].holdPage(p.pages.get(0));
+				frames[i].resetReserved();
+				break;
 			}
 		}
-		// NOT WORKING PROPERLY (PROBABLY)
-		else
+		// Add to lru and check if memory space for process is full
+		// if memory space is full, move arrow to start of memory space for process
+		int index = (p.getIDRank()-1);
+		// if no more free space there, move arrow to starting value
+		if(!freeSpace(p))
 		{
-			// if memory is full, move arrow to 0
+			if(!fullBefore)
+			{
+				arrow = p.memoryRange.get(0).intValue();
+				fullBefore = true;
+			}
+			else
+				incrArrow(p);
 		}
 	}
 
@@ -141,10 +172,21 @@ class ClockProcessor
 			}
 			// System.out.println("swapped " + frames[index].getHolding().getID());
 			frames[index].holdPage(p.pages.firstElement());
+			// frames[index].giveSecondChance();
+			// incrArrow(p);
 		}
 		else
 		{
-
+			while(frames[arrow].hasSecondChance())
+			{
+				frames[arrow].takeSecondChance();
+				incrArrow(p);
+			}
+			System.out.println("swap in " +p.pages.firstElement().getID() +" for " + frames[arrow].getHolding().getID()
+					+ " at " + getTime());
+			frames[arrow].holdPage(p.pages.firstElement());
+			frames[arrow].giveSecondChance();
+			// incrArrow(p);
 		}
 	}
 
@@ -164,6 +206,40 @@ class ClockProcessor
 			}
 		}
 		p.pages.remove(0);
+	}
+
+	// Reserves the frame which p's page will be swapped into
+	public void reserve(Process p)
+	{
+		if(freeSpace(p))
+		{
+			// If the frame is neither occupied nor reserved, reserve it for this process' page
+			for(int i=0; i<MEMORYSIZE; i++)
+			{
+				if(!frames[i].isOccupied() && !frames[i].isReserved())
+				{
+					// System.out.println( i + " is reserved for " + p.pages.firstElement().getID());
+					frames[i].reserveFor(p.pages.firstElement());
+					frames[i].giveSecondChance();
+					break;
+				}
+			}
+		}
+	}
+
+	public void removeFromMemory(Process p)
+	{
+		// check each occupied frame in main memory, if it belongs to p, remove it
+		for(int i=0; i<MEMORYSIZE; i++)
+		{
+			if(frames[i].isOccupied())
+			{
+				String s[] = frames[i].getHolding().getID().split("_");
+				int pageInt = Integer.parseInt(s[0]);
+				if(pageInt == p.getIDRank())
+					frames[i].resetOccupied();
+			}
+		}
 	}
 
 	public void incrTime()
@@ -207,12 +283,18 @@ class ClockProcessor
 		if(occupied() > 1)
 		{
 			String s = "{" + frames[firstOccupied()].getHolding().getID();
+			if(frames[firstOccupied()].hasSecondChance())
+				s+="*";
 			for(int i=firstOccupied()+1; i<MEMORYSIZE; i++)
 			{
 				if(frames[i].isOccupied())
 				{
 					s+= ", " + frames[i].getHolding().getID();
 				}
+				if(frames[i].isReserved())
+					s+=",[res]";
+				if(frames[i].hasSecondChance())
+					s+="*";
 			}
 			s+="}";
 			System.out.println(s);

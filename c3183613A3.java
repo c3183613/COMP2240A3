@@ -31,7 +31,7 @@ class c3183613A3
 					newProcess.pages.add(new Page(newProcess.getID()+"_"+Integer.parseInt(nextLine)));
 					nextLine = scan.nextLine();
 				}
-					// Print out all contents of newProcess
+				// Print out all contents of newProcess
 				// System.out.println("Name: "+newProcess.getID());
 				// for(Integer j: newProcess.executionTrace)
 				// {
@@ -51,7 +51,7 @@ class c3183613A3
 			sim.lruFixed();	
 			sim.lruVariable();
 			sim.fixedClock();
-			// sim.variableClock();
+			sim.variableClock();
 		}
 	}
 }
