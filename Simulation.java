@@ -2,8 +2,9 @@ import java.util.Vector;
 
 class Simulation
 {
+	// Master copy which each algorithm makes a deep copy of
 	Vector<Process> masterVector;
-	int quantum;
+	// Array which each algorithm adds to for printing purposes
 	String printArray[];
 
 	Simulation(Vector<Process> dummy)
@@ -16,7 +17,9 @@ class Simulation
 	public void lruFixed() 
 	{
 		// initialization
+		// ready queue
 		Vector<Process> rQ = cpVector(masterVector);
+		// blocked queue
 		Vector<Process> bQ = new Vector<Process>();
 		Processor processor = new Processor();
 		printArray = new String[masterVector.size()];
@@ -25,6 +28,7 @@ class Simulation
 		{
 			lru.add(new Vector<Page>());
 		}
+		// determine the memory range each Process gets
 		getRange(rQ, processor);
 		int roundRobin = 0;
 		// Run until all processes are finished
@@ -88,8 +92,9 @@ class Simulation
 				processor.incrTime();
 				incrBQ(bQ, rQ, processor, lru);
 			}
-		}//finished while loop
-		System.out.println("LRU Fixed:");
+		} //finished while loop
+		// print summary
+		System.out.println("LRU - Fixed:");
 		print();
 	}
 
@@ -122,13 +127,17 @@ class Simulation
 				}
 				// remove from blocked queue and decrement
 				bQ.remove(i);
+				// decrement i to make sure not to miss any elements
 				i--;
 			}
 		}
 	}
 
+
+	// Algorithm for Least Recently Used with Global Variable scope
 	public void lruVariable()
 	{
+		// Initialization
 		Vector<Process> rQ = cpVector(masterVector);
 		Vector<Process> bQ = new Vector<Process>();
 		Vector<Page> lru = new Vector<Page>();
@@ -184,7 +193,7 @@ class Simulation
 					// Must reserve the slot that it is going to take
 					if(processor.freeSpace(rQ.get(0)))
 						processor.reserve(rQ.get(0), lru);
-					// swap immediately as lru will not be used
+					// swap immediately as lru can not be used during IO access
 					else
 						processor.lruSwapVariable(rQ.get(0), lru);
 					// add to blocked queue
@@ -193,7 +202,8 @@ class Simulation
 					rQ.remove(0);
 				}
 			}
-			// rQ.size == 0
+			// If there are no Processes in the ready queue
+			// reset roundrobin, increment time and increment time for processes in blocked queue
 			else
 			{
 				roundRobin = 0;
@@ -201,11 +211,14 @@ class Simulation
 				processor.incrTime();
 				incrBQVariable(bQ, rQ, processor, lru);
 			}
-		}
-		System.out.println("\n\nLRU Variable:");
+		} // end of while loop
+		// print summary
+		System.out.println("\n\nLRU - Variable:");
 		print();
 	}
 
+	// increments time for each process in blocked queue
+	// if element's blocked time == 6, add to ready queue and add into main memory
 	private void incrBQVariable(Vector<Process> bQ, Vector<Process> rQ, Processor processor, Vector<Page> lru)
 	{
 		// for each process that is blocked
@@ -232,8 +245,11 @@ class Simulation
 		}
 	}
 
+
+	// Algorithms for Fixed scope for Clock
 	public void fixedClock()
 	{
+		// Initialization
 		int roundRobin = 0;
 		Vector<Process> rQ = cpVector(masterVector);
 		Vector<Process> bQ = new Vector<Process>();
@@ -297,7 +313,7 @@ class Simulation
 				incrBQClockFixed(bQ, rQ, processor);
 			}
 		} // end of while loop
-		System.out.println("\n\nClock fixed:");
+		System.out.println("\n\nClock - Fixed:");
 		print();
 	}
 
@@ -345,7 +361,6 @@ class Simulation
 				}
 				else // not in main memory
 				{
-					System.out.println("fault at " + processor.getTime());
 					roundRobin = 0;
 					if(processor.freeSpace(rQ.get(0)))
 						processor.reserve(rQ.get(0));
@@ -365,13 +380,13 @@ class Simulation
 				processor.incrTime();
 				incrBQClockVariable(bQ, rQ, processor);
 			}
-			processor.print();
 		}
-		System.out.println("\n\nClock Variable:");
+		System.out.println("\n\nClock - Variable:");
 		print();
 	}
 
-	//  Increment BQ blocked time for Fixed Clock
+	// increments time for each process in blocked queue
+	// if element's blocked time == 6, add to ready queue and add into main memory
 	public void incrBQClockFixed(Vector<Process> bQ, Vector<Process> rQ, ClockProcessor processor)
 	{
 		for(int i=0; i<bQ.size(); i++)
@@ -396,7 +411,8 @@ class Simulation
 		}
 	}
 
-	//  Increment BQ for VariableClock
+	// increments time for each process in blocked queue
+	// if element's blocked time == 6, add to ready queue and add into main memory
 	public void incrBQClockVariable(Vector<Process> bQ, Vector<Process> rQ, ClockProcessor processor)
 	{
 		for(int i=0; i<bQ.size(); i++)
@@ -421,10 +437,11 @@ class Simulation
 		}
 	}
 
+	// print printArray
 	private void print()
 	{
 		// print outputs
-		System.out.println("PID  Turnaround Time  # Faults  Fault times");
+		System.out.println("PID\t\tTurnaround Time\t\t\t# Faults\tFault times");
 		for(int i=0;i<masterVector.size();i++)
 		{
 			System.out.println(printArray[i]);
@@ -460,6 +477,8 @@ class Simulation
 		}
 	}
 
+	// Only used for clock Fixed
+	// Set memory range that Process can access
 	private void getRangeClock(Vector<Process> master, ClockProcessor processor)
 	{
 		int i = 0;
@@ -473,6 +492,7 @@ class Simulation
 		}
 	}
 
+	// Set memory range that Process can access
 	private void getRangeVariable(Vector<Process> vector, Processor processor)
 	{
 		for(Process p: vector)
@@ -482,6 +502,7 @@ class Simulation
 		}
 	}
 
+	// Set memory range that Process can access
 	private void getRangeClockVariable(Vector<Process> rQ, ClockProcessor processor)
 	{
 		for(Process p: rQ)

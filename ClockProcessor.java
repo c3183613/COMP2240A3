@@ -2,6 +2,17 @@ import java.util.Vector;
 
 class ClockProcessor
 {
+	/*
+		MEMORY SIZE: Size of main memory in processor
+		isFixed: boolean on whether we were using Fixed Clock or Variable clock. True if using Fixed Clock, false otherwise
+		fullBefore: initialized in constructor as false, when the main memory first fills up, value changed to true for the rest of the run time
+		multFullBefore: same thing as fullBefore for Fixed Clock, Array used to keep track of subsections of memory; array size would be equivalent to how many chunks
+		the main memory is split into for Processes to use
+		frames[]: Array of Frame used as main memory.
+		time: keeps track of time
+		arrow: Index for which Page may be swapped out of main memory next. Works as Second Chance algorithm pointer
+		multArrow[]: same thing as arrow for Fixed Clock
+	*/
 	public static final int MEMORYSIZE = 30;
 	private boolean isFixed, fullBefore;
 	private boolean multFullBefore[];
@@ -9,6 +20,7 @@ class ClockProcessor
 	private int time, arrow;
 	private int multArrow[];
 
+	// Initialize ClockProcessor
 	ClockProcessor(boolean thisvalue)
 	{
 		fullBefore = false;
@@ -31,7 +43,8 @@ class ClockProcessor
 		return time;
 	}
 
-	// returns true if there is free space for this 
+	// returns true if there is free space for this Process (Space that is neither occupied by another frame or reserved) 
+	// within the Process' memory boundaries return false otherwise
 	public boolean freeSpace(Process p)
 	{
 		for(int i=p.memoryRange.get(0).intValue();i<= p.memoryRange.get(1).intValue(); i++)
@@ -42,6 +55,19 @@ class ClockProcessor
 		return false;
 	}
 
+	// Checks if there is any free space in the entire main memory
+	public boolean free()
+	{
+		for(int i=0;i< MEMORYSIZE; i++)
+		{
+			if(!frames[i].isOccupied() && !frames[i].isReserved())
+				return true;
+		}
+		return false;
+	}
+
+	// Returns true if frames[] contains Process' page to be executed next
+	// Returns false otherwise
 	public boolean contains(Process p)
 	{
 		for(int i=p.memoryRange.get(0).intValue();i<= p.memoryRange.get(1).intValue(); i++)
@@ -56,6 +82,7 @@ class ClockProcessor
 	}
 
 	// returns index where there is a first occupied frame
+	// If there are no frames occupied, returns -1
 	public int firstOccupied()
 	{
 		if(occupied() > 0)
@@ -85,7 +112,8 @@ class ClockProcessor
 		return occupied;
 	}
 
-	// Used to see if there is a spot reserved for process
+	// returns true if there is a frame reserved for p's next page to be executed
+	// returns false otherwise
 	public boolean spaceFor(Process p)
 	{
 		for(int i=p.memoryRange.firstElement().intValue(); i<=p.memoryRange.get(1).intValue(); i++)
@@ -97,13 +125,17 @@ class ClockProcessor
 	}
 
 	// MUTATOR METHODS
+
+	// Occupies free space within p's boundaries - used by Fixed
 	public void occupy(Process p)
 	{
 		// System.out.println("adding "+p.pages.firstElement().getID()+"@"+getTime());
 		for(int i=p.memoryRange.get(0).intValue(); i <= p.memoryRange.get(1).intValue();i++)
 		{
+			// if this frame within process' boundaries is not occupied or reserved
 			if(!frames[i].isOccupied() && !frames[i].isReserved())
 			{
+				// give this frame second chance and have it hold the page the process needs executed next
 				frames[i].holdPage(p.pages.get(0));
 				frames[i].giveSecondChance();
 				break;
@@ -125,6 +157,7 @@ class ClockProcessor
 		}
 	}
 
+	// Occupy space that has been reserved for p
 	public void occupyVariable(Process p)
 	{
 		// System.out.println("adding "+p.pages.firstElement().getID()+"@"+getTime());
@@ -141,18 +174,9 @@ class ClockProcessor
 		// if memory space is full, move arrow to start of memory space for process
 		int index = (p.getIDRank()-1);
 		// if no more free space there, move arrow to starting value
-		if(!freeSpace(p))
-		{
-			if(!fullBefore)
-			{
-				arrow = p.memoryRange.get(0).intValue();
-				fullBefore = true;
-			}
-			else
-				incrArrow(p);
-		}
 	}
 
+	// Swaps p's next page to be executed with the page in memory which the arrow is pointing at
 	public void clockSwap(Process p)
 	{
 		// System.out.println("Trying to swap in "+ p.pages.firstElement().getID() + "@"+getTime());
@@ -182,14 +206,16 @@ class ClockProcessor
 				frames[arrow].takeSecondChance();
 				incrArrow(p);
 			}
-			System.out.println("swap in " +p.pages.firstElement().getID() +" for " + frames[arrow].getHolding().getID()
-					+ " at " + getTime());
+			// System.out.println("13 is occupied: "+frames[arrow].isOccupied());
+			// System.out.println("swap in " +p.pages.firstElement().getID() +" for " + frames[arrow].getHolding().getID()
+			// 		+ " at " + getTime());
 			frames[arrow].holdPage(p.pages.firstElement());
 			frames[arrow].giveSecondChance();
-			// incrArrow(p);
+			incrArrow(p);
 		}
 	}
 
+	// Gives the page in memory that needs to be run second chance and remove page from p
 	public void run(Process p)
 	{
 		// System.out.println("running " + p.pages.firstElement().getID() + "@"+getTime());
@@ -225,8 +251,20 @@ class ClockProcessor
 				}
 			}
 		}
+		if(!free())
+		{
+			if(!fullBefore)
+			{
+				arrow = p.memoryRange.get(0).intValue();
+				fullBefore = true;
+			}
+			else
+				incrArrow(p);
+		}
 	}
 
+	// When Process has no more pages to be executed
+	// Removes all pages that are owned by process in the main memory
 	public void removeFromMemory(Process p)
 	{
 		// check each occupied frame in main memory, if it belongs to p, remove it
@@ -242,11 +280,13 @@ class ClockProcessor
 		}
 	}
 
+ 	// increment time
 	public void incrTime()
 	{
 		time++;
 	}
 
+	// increment arrow; if arrow exceeds a certain bound, move it back to the beginning of its memory range
 	private void incrArrow(Process p)
 	{
 		if(!isFixed)
@@ -265,6 +305,7 @@ class ClockProcessor
 	}
 	
 	// Only used for LRUFixed
+	// initialize multArrow and multFullBefore
 	public void setArrow(int size)
 	{
 		multArrow = new int[size];
@@ -276,7 +317,7 @@ class ClockProcessor
 		}
 	}
 
-	// Prints taken frames
+	// Prints occupied frames
 	public void print()
 	{
 		// System.out.println("MEMORY at "+getTime());

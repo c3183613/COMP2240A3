@@ -2,11 +2,14 @@ import java.util.Vector;
 
 class Processor
 {
+	// static final int value for easy changing
 	static final int MEMORYSIZE = 30;
 	// Processor has 30 frames of main memory
 	Frame[] frames = new Frame[MEMORYSIZE];
 	// Measures time
 	private int time;
+
+	// CONSTRUCTOR
 
 	Processor()	
 	{
@@ -17,12 +20,8 @@ class Processor
 		}
 	}
 
-	// Increments time by 1
-	public void incrTime()
-	{
-		time++;
-	}
-
+	// QUERY METHODS
+	
 	// Returns time
 	public int getTime()
 	{
@@ -64,6 +63,14 @@ class Processor
 				return true;
 		}
 		return false;
+	}
+
+	// MUTATOR METHODS
+
+	// Increments time by 1
+	public void incrTime()
+	{
+		time++;
 	}
 
 	// Occupies a free space within process' allocated memory slots

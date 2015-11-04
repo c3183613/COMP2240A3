@@ -2,10 +2,11 @@ class Page
 {
 	// unique identifier
 	private String pageID;
-	// Has been executed
-	// Currently in main memory
-	private boolean inMain;
+	// Currently in main memory, true if in main memory 
+	private boolean inMain;	// not used
 
+
+	// CONSUTRUCTORS
 	Page(String newID)
 	{
 		pageID = newID.substring(7, newID.length());
@@ -18,17 +19,20 @@ class Page
 		this.inMain = p.inMain;
 	}
 
+	// QUERY METHODS
 	public String getID()
 	{
 		return pageID;
 	}
 
-	public void setInMain(boolean i)
+	public boolean isinMain()
 	{
-		inMain = i;
+		return inMain;
 	}
 
-	public void setInMain(boolean i, int j)
+	// MUTATOR METHODS
+
+	public void setInMain(boolean i)
 	{
 		inMain = i;
 	}
@@ -38,11 +42,7 @@ class Page
 		inMain = false;
 	}
 
-	public boolean isinMain()
-	{
-		return inMain;
-	}
-
+	// used for testing purposes
 	public void execute(int time)
 	{
 		System.out.println(getID() + " has gotten service time at "+ time);

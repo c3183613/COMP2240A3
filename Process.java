@@ -3,12 +3,13 @@ import java.util.Vector;
 class Process
 {
 	/*
-		servTime - remaining process time required to complete
-		execTime - total ticks required to complete
-		arrivalTime - time that process accesses system
-		waitTime - time waited in queues after arrival time
+		Only commenting member variables which were used
 		procID - unique identifier for the process
-		faultTimes - 
+		idRank - Number of which process it is (determined by the procID)
+		blockedTime - keeps track of how long the process has been blocked
+		pages - Vector page of the execution trace
+		lastRemoved - Stores the page that was last removed from the execution trace
+		faultTimes - Vector storing each of the 
 	*/
 	private int arrivalTime, execTime, waitTime, servTime, idRank, blockedTime;
 	private String procID;
@@ -125,6 +126,8 @@ class Process
 		return blockedTime;
 	}
 
+	// Returns string of the fault times in the form of
+	// {fault1, fault2, fault3}
 	public String getFaultTimesString()
 	{
 		if(faultTimes.size() == 0)
@@ -143,11 +146,13 @@ class Process
 		}
 	}
 
+	// returns Vector faultTimes
 	public Vector<Integer> getFaultTimes()
 	{
 		return faultTimes;
 	}
 
+	// returns state of Process
 	public State getState()
 	{
 		return state;
@@ -184,16 +189,19 @@ class Process
 		servTime--;
 	}
 
+	// reset blockTime to 0
 	public void rBlockedTime()
 	{
 		blockedTime = 0;
 	}
 
+	// incrment blockedtime by 1
 	public void incrBlockedTime()
 	{
 		blockedTime++;
 	}
 
+	// sets state of Process
 	public void setState(State newState)
 	{
 		state = newState;
@@ -215,6 +223,7 @@ class Process
 			return false;
 	}
 
+	// add time to faultTimes
 	public void addFault(int time)
 	{
 		faultTimes.add(time);
